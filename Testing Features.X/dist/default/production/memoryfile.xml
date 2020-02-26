@@ -3,15 +3,15 @@
   <executable name="dist/default/production\Testing_Features.X.production.hex">
     <memory name="program">
       <units>bytes</units>
-      <length>32768</length>
+      <length>8192</length>
       <used>798</used>
-      <free>31970</free>
+      <free>7394</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>1536</length>
+      <length>512</length>
       <used>9</used>
-      <free>1527</free>
+      <free>503</free>
     </memory>
   </executable>
 </project>

@@ -45,36 +45,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x CP0 = OFF ]
 "82
 [p x CP1 = OFF ]
-"83
-[p x CP2 = OFF ]
-"84
-[p x CP3 = OFF ]
-"87
+"85
 [p x CPB = OFF ]
-"88
+"86
 [p x CPD = OFF ]
-"91
+"89
 [p x WRT0 = OFF ]
-"92
+"90
 [p x WRT1 = OFF ]
 "93
-[p x WRT2 = OFF ]
-"94
-[p x WRT3 = OFF ]
-"97
 [p x WRTC = OFF ]
-"98
+"94
 [p x WRTB = OFF ]
-"99
+"95
 [p x WRTD = OFF ]
-"102
+"98
 [p x EBTR0 = OFF ]
-"103
+"99
 [p x EBTR1 = OFF ]
-"104
-[p x EBTR2 = OFF ]
-"105
-[p x EBTR3 = OFF ]
-"108
-[; ;mcc_generated_files/device_config.c: 108: 
+"102
+[; ;mcc_generated_files/device_config.c: 102: 
 [p x EBTRB = OFF ]

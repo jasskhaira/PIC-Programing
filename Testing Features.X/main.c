@@ -14,7 +14,7 @@
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.78.1
-        Device            :  PIC18F45K22
+        Device            :  PIC18F43K22
         Driver Version    :  2.00
 */
 
@@ -42,7 +42,7 @@
 */
 
 #include "mcc_generated_files/mcc.h"
-#include "Motors.h"
+#include"Motors.h"
 /*
                          Main application
  */
@@ -69,8 +69,7 @@ void main(void)
 
     while (1)
     {
-          while (1)
-    {
+        {
      
         Chair_Position("F0RWARD");
         __delay_ms(1000);
@@ -84,13 +83,9 @@ void main(void)
         __delay_ms(1000);
         Chair_Position("RIGHT");
         __delay_ms(1000);
-        // Add your application code
-        
-        
-        // Add your application code
+ // Add your application code
     }
-    }
-}
+    }}
 /**
  End of File
-*/
+ * }*/
