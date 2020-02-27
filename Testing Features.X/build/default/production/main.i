@@ -9662,7 +9662,7 @@ void OSCILLATOR_Initialize(void);
 # 44 "main.c" 2
 
 # 1 "./Motors.h" 1
-# 16 "./Motors.h"
+# 22 "./Motors.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9718,40 +9718,47 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 16 "./Motors.h" 2
+# 22 "./Motors.h" 2
 
+
+    void Motor_Initalize(){
+
+        LA3=1;
+    }
 
     void Leftwheel_Forward(){
-            LA0=1;
-            LA1=0;
-            LE0=1;
+        LA2=1;
+        LA1=0;
+        LA0=1;
 
          }
     void Rightwheel_Forward(){
-            LA2=1;
-            LA3=0;
-            LE1=1;
+        LA4=1;
+        LA5=0;
+        LE0=1;
 
          }
     void Leftwheel_Back(){
-            LA0=0;
-            LA1=1;
-            LE0=1;
+        LA2=0;
+        LA1=1;
+        LA0=1;
 
          }
     void Rightwheel_Back(){
-            LA2=0;
-            LA3=1;
-            LE1=1;
+        LA4=0;
+        LA5=1;
+        LE0=1;
 
          }
 
     void Leftwheel_Stop() {
-        LE0=0;
+         LA0=1;
+
     }
 
     void Rightwheel_Stop() {
-        LE1=0;
+         LE0=1;
+
     }
 
     void Move_Forward(){
@@ -9779,7 +9786,7 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
           Leftwheel_Stop();
           Rightwheel_Stop();
         }
-# 88 "./Motors.h"
+# 101 "./Motors.h"
     int Chair_Position(char Command[] )
     {
         if(strcmp(Command,"FORWARD")==0)
@@ -9825,7 +9832,8 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-# 70 "main.c"
+    Motor_Initalize();
+# 71 "main.c"
     while (1)
     {
         {

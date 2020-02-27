@@ -7,7 +7,13 @@
 
 #ifndef MOTORS_H
 #define	MOTORS_H
+#define Left_Motor1     LA2     //  To BIN2
+#define Left_Motor2     LA1     //  To BIN1
+#define Left_M_State    LA0     //  To PWM B
 
+#define Right_Motor1    LA4     // To AIN1
+#define Right_Motor2    LA5     // To AIN2 
+#define Right_M_State   LE0     // To PWMA 
 #ifdef	__cplusplus
 extern "C" {
 #endif
@@ -15,37 +21,44 @@ extern "C" {
 
 #include<string.h>
     
+    void Motor_Initalize(){
+        
+        LA3=1;      // STBY STATE HIGH
+    }
+    
     void Leftwheel_Forward(){
-            LA0=1;
-            LA1=0;
-            LE0=1;
+        Left_Motor1=1;
+        Left_Motor2=0;
+        Left_M_State=1;
             
          }
     void Rightwheel_Forward(){
-            LA2=1;
-            LA3=0;
-            LE1=1;
+        Right_Motor1=1;
+        Right_Motor2=0;
+        Right_M_State=1;
             
          }
     void Leftwheel_Back(){
-            LA0=0;
-            LA1=1;
-            LE0=1;
+        Left_Motor1=0;
+        Left_Motor2=1;
+        Left_M_State=1; 
             
          }
     void Rightwheel_Back(){
-            LA2=0;
-            LA3=1;
-            LE1=1;
+        Right_Motor1=0;
+        Right_Motor2=1;
+        Right_M_State=1;
             
          }
     
     void Leftwheel_Stop() {
-        LE0=0;
+         Left_M_State=1;
+     
     }
     
     void Rightwheel_Stop() {
-        LE1=0;
+         Right_M_State=1;
+     
     }
     
     void Move_Forward(){

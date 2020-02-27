@@ -3,29 +3,31 @@
 [d edition pro ]
 [d chip 18F43K22 ]
 [d frameptr 4065 ]
-"18 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Testing Features.X/Motors.h
+"24 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Testing Features.X/Motors.h
+[v _Motor_Initalize Motor_Initalize `(v  1 e 1 0 ]
+"29
 [v _Leftwheel_Forward Leftwheel_Forward `(v  1 e 1 0 ]
-"24
+"35
 [v _Rightwheel_Forward Rightwheel_Forward `(v  1 e 1 0 ]
-"30
+"41
 [v _Leftwheel_Back Leftwheel_Back `(v  1 e 1 0 ]
-"36
-[v _Rightwheel_Back Rightwheel_Back `(v  1 e 1 0 ]
-"43
-[v _Leftwheel_Stop Leftwheel_Stop `(v  1 e 1 0 ]
 "47
+[v _Rightwheel_Back Rightwheel_Back `(v  1 e 1 0 ]
+"54
+[v _Leftwheel_Stop Leftwheel_Stop `(v  1 e 1 0 ]
+"59
 [v _Rightwheel_Stop Rightwheel_Stop `(v  1 e 1 0 ]
-"51
+"64
 [v _Move_Forward Move_Forward `(v  1 e 1 0 ]
-"57
+"70
 [v _Move_Back Move_Back `(v  1 e 1 0 ]
-"62
+"75
 [v _Move_left Move_left `(v  1 e 1 0 ]
-"67
+"80
 [v _Move_Right Move_Right `(v  1 e 1 0 ]
-"72
+"85
 [v _Stop Stop `(v  1 e 1 0 ]
-"88
+"101
 [v _Chair_Position Chair_Position `(i  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -150,14 +152,16 @@
 [v _LA2 LA2 `VEb  1 e 0 @31818 ]
 "18685
 [v _LA3 LA3 `VEb  1 e 0 @31819 ]
+"18688
+[v _LA4 LA4 `VEb  1 e 0 @31820 ]
+"18691
+[v _LA5 LA5 `VEb  1 e 0 @31821 ]
 "18877
 [v _LE0 LE0 `VEb  1 e 0 @31848 ]
-"18880
-[v _LE1 LE1 `VEb  1 e 0 @31849 ]
 "49 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Testing Features.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"88
+"89
 } 0
 "50 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Testing Features.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -174,11 +178,16 @@
 {
 "65
 } 0
-"88 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Testing Features.X/Motors.h
+"24 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Testing Features.X/Motors.h
+[v _Motor_Initalize Motor_Initalize `(v  1 e 1 0 ]
+{
+"27
+} 0
+"101
 [v _Chair_Position Chair_Position `(i  1 e 2 0 ]
 {
 [v Chair_Position@Command Command `*.32uc  1 p 2 5 ]
-"123
+"136
 } 0
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -187,58 +196,58 @@
 [v strcmp@r r `*.32Cuc  1 p 2 2 ]
 "7
 } 0
-"72 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Testing Features.X/Motors.h
+"85 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Testing Features.X/Motors.h
 [v _Stop Stop `(v  1 e 1 0 ]
 {
-"75
+"88
 } 0
-"62
+"75
 [v _Move_left Move_left `(v  1 e 1 0 ]
 {
-"65
+"78
 } 0
-"47
+"59
 [v _Rightwheel_Stop Rightwheel_Stop `(v  1 e 1 0 ]
 {
-"49
+"62
 } 0
-"67
+"80
 [v _Move_Right Move_Right `(v  1 e 1 0 ]
 {
-"70
+"83
 } 0
-"43
+"54
 [v _Leftwheel_Stop Leftwheel_Stop `(v  1 e 1 0 ]
 {
-"45
+"57
 } 0
-"51
+"64
 [v _Move_Forward Move_Forward `(v  1 e 1 0 ]
 {
-"55
+"68
 } 0
-"24
+"35
 [v _Rightwheel_Forward Rightwheel_Forward `(v  1 e 1 0 ]
 {
-"29
+"40
 } 0
-"18
+"29
 [v _Leftwheel_Forward Leftwheel_Forward `(v  1 e 1 0 ]
 {
-"23
+"34
 } 0
-"57
+"70
 [v _Move_Back Move_Back `(v  1 e 1 0 ]
 {
-"60
+"73
 } 0
-"36
+"47
 [v _Rightwheel_Back Rightwheel_Back `(v  1 e 1 0 ]
 {
-"41
+"52
 } 0
-"30
+"41
 [v _Leftwheel_Back Leftwheel_Back `(v  1 e 1 0 ]
 {
-"35
+"46
 } 0
