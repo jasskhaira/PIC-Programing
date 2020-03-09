@@ -9529,9 +9529,9 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 78 "./mcc_generated_files/pin_manager.h"
+# 221 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 90 "./mcc_generated_files/pin_manager.h"
+# 233 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -9655,14 +9655,204 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "./mcc_generated_files/mcc.h" 2
-# 69 "./mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/tmr0.h" 1
+# 100 "./mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
+# 129 "./mcc_generated_files/tmr0.h"
+void TMR0_StartTimer(void);
+# 161 "./mcc_generated_files/tmr0.h"
+void TMR0_StopTimer(void);
+# 197 "./mcc_generated_files/tmr0.h"
+uint16_t TMR0_ReadTimer(void);
+# 236 "./mcc_generated_files/tmr0.h"
+void TMR0_WriteTimer(uint16_t timerVal);
+# 272 "./mcc_generated_files/tmr0.h"
+void TMR0_Reload(void);
+# 310 "./mcc_generated_files/tmr0.h"
+_Bool TMR0_HasOverflowOccured(void);
+# 55 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/eusart1.h" 1
+# 57 "./mcc_generated_files/eusart1.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 57 "./mcc_generated_files/eusart1.h" 2
+# 76 "./mcc_generated_files/eusart1.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart1_status_t;
+# 111 "./mcc_generated_files/eusart1.h"
+void EUSART1_Initialize(void);
+# 159 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_tx_ready(void);
+# 207 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_rx_ready(void);
+# 254 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_tx_done(void);
+# 302 "./mcc_generated_files/eusart1.h"
+eusart1_status_t EUSART1_get_last_status(void);
+# 322 "./mcc_generated_files/eusart1.h"
+uint8_t EUSART1_Read(void);
+# 342 "./mcc_generated_files/eusart1.h"
+void EUSART1_Write(uint8_t txData);
+# 362 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 380 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 398 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+# 56 "./mcc_generated_files/mcc.h" 2
+# 71 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 82 "./mcc_generated_files/mcc.h"
+# 84 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 44 "main.c" 2
 
 # 1 "./Motors.h" 1
-# 22 "./Motors.h"
+# 23 "./Motors.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9718,46 +9908,50 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 22 "./Motors.h" 2
+# 23 "./Motors.h" 2
 
 
     void Motor_Initalize(){
 
-        LA3=1;
+        LATAbits.LATA3=1;
     }
 
     void Leftwheel_Forward(){
-        LA2=1;
-        LA1=0;
-        LA0=1;
+        do { LATAbits.LATA2 = 0; } while(0);
+        do { LATAbits.LATA1 = 1; } while(0);
+        do { LATAbits.LATA0 = 1; } while(0);
+        printf("ok");
+
+
+
 
          }
     void Rightwheel_Forward(){
-        LA4=1;
-        LA5=0;
-        LE0=1;
+        LATAbits.LATA4=1;
+        LATAbits.LATA5=0;
+        LATEbits.LATE0=1;
 
          }
     void Leftwheel_Back(){
-        LA2=0;
-        LA1=1;
-        LA0=1;
+        LATAbits.LATA2=0;
+        LATAbits.LATA1=1;
+        LATAbits.LATA0=1;
 
          }
     void Rightwheel_Back(){
-        LA4=0;
-        LA5=1;
-        LE0=1;
+        LATAbits.LATA4=0;
+        LATAbits.LATA5=1;
+        LATEbits.LATE0=1;
 
          }
 
     void Leftwheel_Stop() {
-         LA0=1;
+         LATAbits.LATA0=0;
 
     }
 
     void Rightwheel_Stop() {
-         LE0=1;
+         LATEbits.LATE0=0;
 
     }
 
@@ -9786,7 +9980,7 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
           Leftwheel_Stop();
           Rightwheel_Stop();
         }
-# 101 "./Motors.h"
+# 106 "./Motors.h"
     int Chair_Position(char Command[] )
     {
         if(strcmp(Command,"FORWARD")==0)
@@ -9825,6 +10019,42 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
     }
 # 45 "main.c" 2
 
+# 1 "./Hc-Sr04.h" 1
+# 16 "./Hc-Sr04.h"
+    float Get_Distance(void){
+
+        float Time, Distance;
+
+
+        do { LATDbits.LATD0 = 1; } while(0);
+       _delay((unsigned long)((10)*(8000000/4000.0)));
+
+        do { LATDbits.LATD0 = 0; } while(0);
+
+       while(PORTDbits.RD1==0)
+           ;
+
+        TMR0_StartTimer();
+       while(PORTDbits.RD1==1)
+           ;
+       TMR0_StopTimer();
+
+       Time = TMR0_ReadTimer();
+
+
+
+       TMR0_WriteTimer(0x00);
+       Distance = Time/59;
+       Distance += 1;
+
+
+       return Distance;
+
+    }
+# 46 "main.c" 2
+
+
+
 
 
 
@@ -9833,23 +10063,20 @@ void main(void)
 
     SYSTEM_Initialize();
     Motor_Initalize();
-# 71 "main.c"
+    float d;
+# 74 "main.c"
+    printf("Hello from MPLAB Xpress! \n \r");
+
+
     while (1)
     {
-        {
-
-        Chair_Position("F0RWARD");
-        _delay((unsigned long)((1000)*(1000000/4000.0)));
-        Chair_Position("STOP");
-        _delay((unsigned long)((1000)*(1000000/4000.0)));
-        Chair_Position("BACK");
-        _delay((unsigned long)((1000)*(1000000/4000.0)));
-        Chair_Position("STOP");
-        _delay((unsigned long)((1000)*(1000000/4000.0)));
-        Chair_Position("LEFT");
-        _delay((unsigned long)((1000)*(1000000/4000.0)));
-        Chair_Position("RIGHT");
-        _delay((unsigned long)((1000)*(1000000/4000.0)));
-
+                  do { LATAbits.LATA2 = 0; } while(0);
+        do { LATAbits.LATA1 = 1; } while(0);
+        do { LATAbits.LATA0 = 1; } while(0);
+            Chair_Position("F0RWARD");
+            printf("Moving");
+            _delay((unsigned long)((9000)*(8000000/4000.0)));
+# 100 "main.c"
     }
-    }}
+
+}

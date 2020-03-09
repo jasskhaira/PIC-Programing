@@ -43,7 +43,10 @@
 
 #include "mcc_generated_files/mcc.h"
 #include"Motors.h"
-/*
+#include "Hc-Sr04.h"
+
+
+     /*
                          Main application
  */
 void main(void)
@@ -51,7 +54,8 @@ void main(void)
     // Initialize the device
     SYSTEM_Initialize();
     Motor_Initalize();
-
+    float d;
+    
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
     // Use the following macros to:
@@ -67,26 +71,35 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-
+    printf("Hello from MPLAB Xpress! \n \r");
+        
+    
     while (1)
     {
-        {
-     
-        Chair_Position("F0RWARD");
-        __delay_ms(1000);
-        Chair_Position("STOP");
-        __delay_ms(1000);
-        Chair_Position("BACK");
-        __delay_ms(1000);
-        Chair_Position("STOP");
-        __delay_ms(1000);
-        Chair_Position("LEFT");
-        __delay_ms(1000);
-        Chair_Position("RIGHT");
-        __delay_ms(1000);
+                  IO_RA2_SetLow();
+        IO_RA1_SetHigh();
+        IO_RA0_SetHigh();
+            Chair_Position("F0RWARD");
+            printf("Moving");
+            __delay_ms(9000);
+    
+            /* d=Get_Distance();
+  
+    
+        if(d>8){    
+            Chair_Position("F0RWARD");
+           // printf("Moving");
+            __delay_us(100);
+        }
+        
+        else{
+        Chair_Position("STOP");  //   printf("stop"); 
+        }*/
  // Add your application code
+    
     }
-    }}
+    
+}
 /**
  End of File
  * }*/

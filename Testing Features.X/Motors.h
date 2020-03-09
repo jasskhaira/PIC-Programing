@@ -7,13 +7,14 @@
 
 #ifndef MOTORS_H
 #define	MOTORS_H
-#define Left_Motor1     LA2     //  To BIN2
-#define Left_Motor2     LA1     //  To BIN1
-#define Left_M_State    LA0     //  To PWM B
+#define Left_Motor1    IO_RA2_LAT      //  To BIN2
+#define Left_Motor2    IO_RA1_LAT      //  To BIN1
+#define Left_M_State   IO_RA0_LAT      //  To PWM B
 
-#define Right_Motor1    LA4     // To AIN1
-#define Right_Motor2    LA5     // To AIN2 
-#define Right_M_State   LE0     // To PWMA 
+#define Right_Motor1    IO_RA4_LAT      // To AIN1
+#define Right_Motor2    IO_RA5_LAT      // To AIN2 
+#define Right_M_State   IO_RE0_LAT      // To PWMA 
+
 #ifdef	__cplusplus
 extern "C" {
 #endif
@@ -23,14 +24,18 @@ extern "C" {
     
     void Motor_Initalize(){
         
-        LA3=1;      // STBY STATE HIGH
+        IO_RA3_LAT=1;      // STBY STATE HIGH
     }
     
     void Leftwheel_Forward(){
-        Left_Motor1=1;
+        IO_RA2_SetLow();
+        IO_RA1_SetHigh();
+        IO_RA0_SetHigh();
+        printf("ok");
+        /*Left_Motor1=1;
         Left_Motor2=0;
         Left_M_State=1;
-            
+         */   
          }
     void Rightwheel_Forward(){
         Right_Motor1=1;
@@ -52,12 +57,12 @@ extern "C" {
          }
     
     void Leftwheel_Stop() {
-         Left_M_State=1;
+         Left_M_State=0;
      
     }
     
     void Rightwheel_Stop() {
-         Right_M_State=1;
+         Right_M_State=0;
      
     }
     

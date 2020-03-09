@@ -1,36 +1,109 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"18685 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 18685: extern volatile __bit LA3 __attribute__((address(0x7C4B)));
-[v _LA3 `Vb ~T0 @X0 0 e@31819 ]
-"18682
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 18682: extern volatile __bit LA2 __attribute__((address(0x7C4A)));
-[v _LA2 `Vb ~T0 @X0 0 e@31818 ]
-"18679
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 18679: extern volatile __bit LA1 __attribute__((address(0x7C49)));
-[v _LA1 `Vb ~T0 @X0 0 e@31817 ]
-"18676
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 18676: extern volatile __bit LA0 __attribute__((address(0x7C48)));
-[v _LA0 `Vb ~T0 @X0 0 e@31816 ]
-"18688
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 18688: extern volatile __bit LA4 __attribute__((address(0x7C4C)));
-[v _LA4 `Vb ~T0 @X0 0 e@31820 ]
-"18691
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 18691: extern volatile __bit LA5 __attribute__((address(0x7C4D)));
-[v _LA5 `Vb ~T0 @X0 0 e@31821 ]
-"18877
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 18877: extern volatile __bit LE0 __attribute__((address(0x7C68)));
-[v _LE0 `Vb ~T0 @X0 0 e@31848 ]
+"7566 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7566:     struct {
+[s S380 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S380 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"7576
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7576:     struct {
+[s S381 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S381 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
+"7565
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7565: typedef union {
+[u S379 `S380 1 `S381 1 ]
+[n S379 . . . ]
+"7587
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7587: extern volatile LATAbits_t LATAbits __attribute__((address(0xF89)));
+[v _LATAbits `VS379 ~T0 @X0 0 e@3977 ]
+"111 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"8014 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 8014:     struct {
+[s S392 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S392 . LATE0 LATE1 LATE2 ]
+"8019
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 8019:     struct {
+[s S393 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S393 . LE0 LE1 LE2 ]
+"8013
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 8013: typedef union {
+[u S391 `S392 1 `S393 1 ]
+[n S391 . . . ]
+"8025
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 8025: extern volatile LATEbits_t LATEbits __attribute__((address(0xF8D)));
+[v _LATEbits `VS391 ~T0 @X0 0 e@3981 ]
 "39 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h: 39: int strcmp (const char *, const char *);
 [v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
-[p mainexit ]
-"69 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 69: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"7902 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7902:     struct {
+[s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S389 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"7912
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7912:     struct {
+[s S390 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S390 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
+"7901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7901: typedef union {
+[u S388 `S389 1 `S390 1 ]
+[n S388 . . . ]
+"7923
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7923: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
+[v _LATDbits `VS388 ~T0 @X0 0 e@3980 ]
 [v F5943 `(v ~T0 @X0 1 tf1`ul ]
 "187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
 [v __delay `JF5943 ~T0 @X0 0 e ]
 [p i __delay ]
+"7148 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7148:     struct {
+[s S363 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S363 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"7158
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7158:     struct {
+[s S364 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S364 . . P2B P2C P2D P1B P1C P1D ]
+"7167
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7167:     struct {
+[s S365 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S365 . . CCP4 . TX2 RX2 ]
+"7174
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7174:     struct {
+[s S366 :3 `uc 1 :1 `uc 1 ]
+[n S366 . . NOT_SS2 ]
+"7178
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7178:     struct {
+[s S367 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S367 . SCK2 SDI2 . nSS2 SDO2 . CK2 DT2 ]
+"7188
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7188:     struct {
+[s S368 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S368 . SCL2 SDA2 . SS2 ]
+"7194
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7194:     struct {
+[s S369 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S369 . AN20 AN21 AN22 AN23 AN24 AN25 AN26 AN27 ]
+"7147
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7147: typedef union {
+[u S362 `S363 1 `S364 1 `S365 1 `S366 1 `S367 1 `S368 1 `S369 1 ]
+[n S362 . . . . . . . . ]
+"7205
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 7205: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
+[v _PORTDbits `VS362 ~T0 @X0 0 e@3971 ]
+"129 ./mcc_generated_files/tmr0.h
+[; ;./mcc_generated_files/tmr0.h: 129: void TMR0_StartTimer(void);
+[v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
+"161
+[; ;./mcc_generated_files/tmr0.h: 161: void TMR0_StopTimer(void);
+[v _TMR0_StopTimer `(v ~T0 @X0 0 ef ]
+"197
+[; ;./mcc_generated_files/tmr0.h: 197: uint16_t TMR0_ReadTimer(void);
+[v _TMR0_ReadTimer `(us ~T0 @X0 0 ef ]
+"236
+[; ;./mcc_generated_files/tmr0.h: 236: void TMR0_WriteTimer(uint16_t timerVal);
+[v _TMR0_WriteTimer `(v ~T0 @X0 0 ef1`us ]
+[p mainexit ]
+"71 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 71: void SYSTEM_Initialize(void);
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -787,398 +860,483 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17372
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"24 ./Motors.h
-[; ;./Motors.h: 24:     void Motor_Initalize(){
+"25 ./Motors.h
+[; ;./Motors.h: 25:     void Motor_Initalize(){
 [v _Motor_Initalize `(v ~T0 @X0 1 ef ]
 {
 [e :U _Motor_Initalize ]
 [f ]
-"26
-[; ;./Motors.h: 26:         LA3=1;
-[e = _LA3 -> -> 1 `i `b ]
 "27
-[; ;./Motors.h: 27:     }
-[e :UE 852 ]
+[; ;./Motors.h: 27:         LATAbits.LATA3=1;
+[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
+"28
+[; ;./Motors.h: 28:     }
+[e :UE 856 ]
 }
-"29
-[; ;./Motors.h: 29:     void Leftwheel_Forward(){
+"30
+[; ;./Motors.h: 30:     void Leftwheel_Forward(){
 [v _Leftwheel_Forward `(v ~T0 @X0 1 ef ]
 {
 [e :U _Leftwheel_Forward ]
 [f ]
-"30
-[; ;./Motors.h: 30:         LA2=1;
-[e = _LA2 -> -> 1 `i `b ]
 "31
-[; ;./Motors.h: 31:         LA1=0;
-[e = _LA1 -> -> 0 `i `b ]
-"32
-[; ;./Motors.h: 32:         LA0=1;
-[e = _LA0 -> -> 1 `i `b ]
-"34
-[; ;./Motors.h: 34:          }
-[e :UE 853 ]
+[; ;./Motors.h: 31:         do { LATAbits.LATA2 = 0; } while(0);
+[e :U 860 ]
+{
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
-"35
-[; ;./Motors.h: 35:     void Rightwheel_Forward(){
+[e :U 859 ]
+"32
+[; ;./Motors.h: 32:         do { LATAbits.LATA1 = 1; } while(0);
+[e :U 863 ]
+{
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+}
+[e :U 862 ]
+"33
+[; ;./Motors.h: 33:         do { LATAbits.LATA0 = 1; } while(0);
+[e :U 866 ]
+{
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 865 ]
+"34
+[; ;./Motors.h: 34:         printf("ok");
+[e ( _printf :s 1C ]
+"39
+[; ;./Motors.h: 39:          }
+[e :UE 857 ]
+}
+"40
+[; ;./Motors.h: 40:     void Rightwheel_Forward(){
 [v _Rightwheel_Forward `(v ~T0 @X0 1 ef ]
 {
 [e :U _Rightwheel_Forward ]
 [f ]
-"36
-[; ;./Motors.h: 36:         LA4=1;
-[e = _LA4 -> -> 1 `i `b ]
-"37
-[; ;./Motors.h: 37:         LA5=0;
-[e = _LA5 -> -> 0 `i `b ]
-"38
-[; ;./Motors.h: 38:         LE0=1;
-[e = _LE0 -> -> 1 `i `b ]
-"40
-[; ;./Motors.h: 40:          }
-[e :UE 854 ]
-}
 "41
-[; ;./Motors.h: 41:     void Leftwheel_Back(){
+[; ;./Motors.h: 41:         LATAbits.LATA4=1;
+[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
+"42
+[; ;./Motors.h: 42:         LATAbits.LATA5=0;
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+"43
+[; ;./Motors.h: 43:         LATEbits.LATE0=1;
+[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
+"45
+[; ;./Motors.h: 45:          }
+[e :UE 867 ]
+}
+"46
+[; ;./Motors.h: 46:     void Leftwheel_Back(){
 [v _Leftwheel_Back `(v ~T0 @X0 1 ef ]
 {
 [e :U _Leftwheel_Back ]
 [f ]
-"42
-[; ;./Motors.h: 42:         LA2=0;
-[e = _LA2 -> -> 0 `i `b ]
-"43
-[; ;./Motors.h: 43:         LA1=1;
-[e = _LA1 -> -> 1 `i `b ]
-"44
-[; ;./Motors.h: 44:         LA0=1;
-[e = _LA0 -> -> 1 `i `b ]
-"46
-[; ;./Motors.h: 46:          }
-[e :UE 855 ]
-}
 "47
-[; ;./Motors.h: 47:     void Rightwheel_Back(){
+[; ;./Motors.h: 47:         LATAbits.LATA2=0;
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+"48
+[; ;./Motors.h: 48:         LATAbits.LATA1=1;
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+"49
+[; ;./Motors.h: 49:         LATAbits.LATA0=1;
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+"51
+[; ;./Motors.h: 51:          }
+[e :UE 868 ]
+}
+"52
+[; ;./Motors.h: 52:     void Rightwheel_Back(){
 [v _Rightwheel_Back `(v ~T0 @X0 1 ef ]
 {
 [e :U _Rightwheel_Back ]
 [f ]
-"48
-[; ;./Motors.h: 48:         LA4=0;
-[e = _LA4 -> -> 0 `i `b ]
-"49
-[; ;./Motors.h: 49:         LA5=1;
-[e = _LA5 -> -> 1 `i `b ]
-"50
-[; ;./Motors.h: 50:         LE0=1;
-[e = _LE0 -> -> 1 `i `b ]
-"52
-[; ;./Motors.h: 52:          }
-[e :UE 856 ]
-}
+"53
+[; ;./Motors.h: 53:         LATAbits.LATA4=0;
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 "54
-[; ;./Motors.h: 54:     void Leftwheel_Stop() {
+[; ;./Motors.h: 54:         LATAbits.LATA5=1;
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+"55
+[; ;./Motors.h: 55:         LATEbits.LATE0=1;
+[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
+"57
+[; ;./Motors.h: 57:          }
+[e :UE 869 ]
+}
+"59
+[; ;./Motors.h: 59:     void Leftwheel_Stop() {
 [v _Leftwheel_Stop `(v ~T0 @X0 1 ef ]
 {
 [e :U _Leftwheel_Stop ]
 [f ]
-"55
-[; ;./Motors.h: 55:          LA0=1;
-[e = _LA0 -> -> 1 `i `b ]
-"57
-[; ;./Motors.h: 57:     }
-[e :UE 857 ]
+"60
+[; ;./Motors.h: 60:          LATAbits.LATA0=0;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+"62
+[; ;./Motors.h: 62:     }
+[e :UE 870 ]
 }
-"59
-[; ;./Motors.h: 59:     void Rightwheel_Stop() {
+"64
+[; ;./Motors.h: 64:     void Rightwheel_Stop() {
 [v _Rightwheel_Stop `(v ~T0 @X0 1 ef ]
 {
 [e :U _Rightwheel_Stop ]
 [f ]
-"60
-[; ;./Motors.h: 60:          LE0=1;
-[e = _LE0 -> -> 1 `i `b ]
-"62
-[; ;./Motors.h: 62:     }
-[e :UE 858 ]
+"65
+[; ;./Motors.h: 65:          LATEbits.LATE0=0;
+[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
+"67
+[; ;./Motors.h: 67:     }
+[e :UE 871 ]
 }
-"64
-[; ;./Motors.h: 64:     void Move_Forward(){
+"69
+[; ;./Motors.h: 69:     void Move_Forward(){
 [v _Move_Forward `(v ~T0 @X0 1 ef ]
 {
 [e :U _Move_Forward ]
 [f ]
-"65
-[; ;./Motors.h: 65:         Leftwheel_Forward();
-[e ( _Leftwheel_Forward ..  ]
-"66
-[; ;./Motors.h: 66:         Rightwheel_Forward();
-[e ( _Rightwheel_Forward ..  ]
-"68
-[; ;./Motors.h: 68:     }
-[e :UE 859 ]
-}
 "70
-[; ;./Motors.h: 70:     void Move_Back(){
+[; ;./Motors.h: 70:         Leftwheel_Forward();
+[e ( _Leftwheel_Forward ..  ]
+"71
+[; ;./Motors.h: 71:         Rightwheel_Forward();
+[e ( _Rightwheel_Forward ..  ]
+"73
+[; ;./Motors.h: 73:     }
+[e :UE 872 ]
+}
+"75
+[; ;./Motors.h: 75:     void Move_Back(){
 [v _Move_Back `(v ~T0 @X0 1 ef ]
 {
 [e :U _Move_Back ]
 [f ]
-"71
-[; ;./Motors.h: 71:         Leftwheel_Back();
+"76
+[; ;./Motors.h: 76:         Leftwheel_Back();
 [e ( _Leftwheel_Back ..  ]
-"72
-[; ;./Motors.h: 72:         Rightwheel_Back();
+"77
+[; ;./Motors.h: 77:         Rightwheel_Back();
 [e ( _Rightwheel_Back ..  ]
-"73
-[; ;./Motors.h: 73:             }
-[e :UE 860 ]
+"78
+[; ;./Motors.h: 78:             }
+[e :UE 873 ]
 }
-"75
-[; ;./Motors.h: 75:     void Move_left(){
+"80
+[; ;./Motors.h: 80:     void Move_left(){
 [v _Move_left `(v ~T0 @X0 1 ef ]
 {
 [e :U _Move_left ]
 [f ]
-"76
-[; ;./Motors.h: 76:         Leftwheel_Forward();
+"81
+[; ;./Motors.h: 81:         Leftwheel_Forward();
 [e ( _Leftwheel_Forward ..  ]
-"77
-[; ;./Motors.h: 77:         Rightwheel_Stop();
+"82
+[; ;./Motors.h: 82:         Rightwheel_Stop();
 [e ( _Rightwheel_Stop ..  ]
-"78
-[; ;./Motors.h: 78:             }
-[e :UE 861 ]
+"83
+[; ;./Motors.h: 83:             }
+[e :UE 874 ]
 }
-"80
-[; ;./Motors.h: 80:     void Move_Right(){
+"85
+[; ;./Motors.h: 85:     void Move_Right(){
 [v _Move_Right `(v ~T0 @X0 1 ef ]
 {
 [e :U _Move_Right ]
 [f ]
-"81
-[; ;./Motors.h: 81:         Leftwheel_Stop();
+"86
+[; ;./Motors.h: 86:         Leftwheel_Stop();
 [e ( _Leftwheel_Stop ..  ]
-"82
-[; ;./Motors.h: 82:         Rightwheel_Forward();
+"87
+[; ;./Motors.h: 87:         Rightwheel_Forward();
 [e ( _Rightwheel_Forward ..  ]
-"83
-[; ;./Motors.h: 83:             }
-[e :UE 862 ]
+"88
+[; ;./Motors.h: 88:             }
+[e :UE 875 ]
 }
-"85
-[; ;./Motors.h: 85:     void Stop(){
+"90
+[; ;./Motors.h: 90:     void Stop(){
 [v _Stop `(v ~T0 @X0 1 ef ]
 {
 [e :U _Stop ]
 [f ]
-"86
-[; ;./Motors.h: 86:           Leftwheel_Stop();
+"91
+[; ;./Motors.h: 91:           Leftwheel_Stop();
 [e ( _Leftwheel_Stop ..  ]
-"87
-[; ;./Motors.h: 87:           Rightwheel_Stop();
+"92
+[; ;./Motors.h: 92:           Rightwheel_Stop();
 [e ( _Rightwheel_Stop ..  ]
-"88
-[; ;./Motors.h: 88:         }
-[e :UE 863 ]
+"93
+[; ;./Motors.h: 93:         }
+[e :UE 876 ]
 }
-"101
-[; ;./Motors.h: 101:     int Chair_Position(char Command[] )
+"106
+[; ;./Motors.h: 106:     int Chair_Position(char Command[] )
 [v _Chair_Position `(i ~T0 @X0 1 ef1`*uc ]
-"102
-[; ;./Motors.h: 102:     {
+"107
+[; ;./Motors.h: 107:     {
 {
 [e :U _Chair_Position ]
-"101
-[; ;./Motors.h: 101:     int Chair_Position(char Command[] )
-[v _Command `*uc ~T0 @X0 1 r1 ]
-"102
-[; ;./Motors.h: 102:     {
-[f ]
-"103
-[; ;./Motors.h: 103:         if(strcmp(Command,"FORWARD")==0)
-[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 1C -> 0 `i 865  ]
-"104
-[; ;./Motors.h: 104:         {
-{
-"105
-[; ;./Motors.h: 105:             Move_Forward();
-[e ( _Move_Forward ..  ]
 "106
-[; ;./Motors.h: 106:            return(1);
-[e ) -> 1 `i ]
-[e $UE 864  ]
+[; ;./Motors.h: 106:     int Chair_Position(char Command[] )
+[v _Command `*uc ~T0 @X0 1 r1 ]
 "107
-[; ;./Motors.h: 107:         }
-}
-[e $U 866  ]
+[; ;./Motors.h: 107:     {
+[f ]
+"108
+[; ;./Motors.h: 108:         if(strcmp(Command,"FORWARD")==0)
+[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 2C -> 0 `i 878  ]
 "109
-[; ;./Motors.h: 109:         else if(strcmp(Command,"BACK")==0)
-[e :U 865 ]
-[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 2C -> 0 `i 867  ]
+[; ;./Motors.h: 109:         {
+{
 "110
-[; ;./Motors.h: 110:         {
-{
+[; ;./Motors.h: 110:             Move_Forward();
+[e ( _Move_Forward ..  ]
 "111
-[; ;./Motors.h: 111:              Move_Back();
-[e ( _Move_Back ..  ]
+[; ;./Motors.h: 111:            return(1);
+[e ) -> 1 `i ]
+[e $UE 877  ]
 "112
-[; ;./Motors.h: 112:              return(1);
-[e ) -> 1 `i ]
-[e $UE 864  ]
-"113
-[; ;./Motors.h: 113:         }
+[; ;./Motors.h: 112:         }
 }
-[e $U 868  ]
+[e $U 879  ]
+"114
+[; ;./Motors.h: 114:         else if(strcmp(Command,"BACK")==0)
+[e :U 878 ]
+[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 3C -> 0 `i 880  ]
 "115
-[; ;./Motors.h: 115:         else if(strcmp(Command,"LEFT")==0)
-[e :U 867 ]
-[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 3C -> 0 `i 869  ]
-"116
-[; ;./Motors.h: 116:         {
+[; ;./Motors.h: 115:         {
 {
+"116
+[; ;./Motors.h: 116:              Move_Back();
+[e ( _Move_Back ..  ]
 "117
-[; ;./Motors.h: 117:             Move_left();
-[e ( _Move_left ..  ]
-"118
-[; ;./Motors.h: 118:             return(1);
+[; ;./Motors.h: 117:              return(1);
 [e ) -> 1 `i ]
-[e $UE 864  ]
-"119
-[; ;./Motors.h: 119:          }
+[e $UE 877  ]
+"118
+[; ;./Motors.h: 118:         }
 }
-[e $U 870  ]
+[e $U 881  ]
 "120
-[; ;./Motors.h: 120:         else if(strcmp(Command,"RIGHT")==0)
-[e :U 869 ]
-[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 4C -> 0 `i 871  ]
+[; ;./Motors.h: 120:         else if(strcmp(Command,"LEFT")==0)
+[e :U 880 ]
+[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 4C -> 0 `i 882  ]
 "121
 [; ;./Motors.h: 121:         {
 {
 "122
-[; ;./Motors.h: 122:             Move_Right();
-[e ( _Move_Right ..  ]
+[; ;./Motors.h: 122:             Move_left();
+[e ( _Move_left ..  ]
 "123
 [; ;./Motors.h: 123:             return(1);
 [e ) -> 1 `i ]
-[e $UE 864  ]
+[e $UE 877  ]
+"124
+[; ;./Motors.h: 124:          }
+}
+[e $U 883  ]
 "125
-[; ;./Motors.h: 125:          }
-}
-[e $U 872  ]
+[; ;./Motors.h: 125:         else if(strcmp(Command,"RIGHT")==0)
+[e :U 882 ]
+[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 5C -> 0 `i 884  ]
 "126
-[; ;./Motors.h: 126:         else if(strcmp(Command,"STOP")==0)
-[e :U 871 ]
-[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 5C -> 0 `i 873  ]
-"127
-[; ;./Motors.h: 127:         {
+[; ;./Motors.h: 126:         {
 {
+"127
+[; ;./Motors.h: 127:             Move_Right();
+[e ( _Move_Right ..  ]
 "128
-[; ;./Motors.h: 128:             Stop();
-[e ( _Stop ..  ]
-"129
-[; ;./Motors.h: 129:             return(1);
+[; ;./Motors.h: 128:             return(1);
 [e ) -> 1 `i ]
-[e $UE 864  ]
-"131
-[; ;./Motors.h: 131:          }
+[e $UE 877  ]
+"130
+[; ;./Motors.h: 130:          }
 }
-[e $U 874  ]
+[e $U 885  ]
+"131
+[; ;./Motors.h: 131:         else if(strcmp(Command,"STOP")==0)
+[e :U 884 ]
+[e $ ! == ( _strcmp (2 , -> _Command `*Cuc :s 6C -> 0 `i 886  ]
 "132
-[; ;./Motors.h: 132:         else
-[e :U 873 ]
+[; ;./Motors.h: 132:         {
+{
 "133
-[; ;./Motors.h: 133:         return(0);
-[e ) -> 0 `i ]
-[e $UE 864  ]
-[e :U 874 ]
-[e :U 872 ]
-[e :U 870 ]
-[e :U 868 ]
-[e :U 866 ]
+[; ;./Motors.h: 133:             Stop();
+[e ( _Stop ..  ]
+"134
+[; ;./Motors.h: 134:             return(1);
+[e ) -> 1 `i ]
+[e $UE 877  ]
 "136
-[; ;./Motors.h: 136:     }
-[e :UE 864 ]
+[; ;./Motors.h: 136:          }
+}
+[e $U 887  ]
+"137
+[; ;./Motors.h: 137:         else
+[e :U 886 ]
+"138
+[; ;./Motors.h: 138:         return(0);
+[e ) -> 0 `i ]
+[e $UE 877  ]
+[e :U 887 ]
+[e :U 885 ]
+[e :U 883 ]
+[e :U 881 ]
+[e :U 879 ]
+"141
+[; ;./Motors.h: 141:     }
+[e :UE 877 ]
+}
+"16 ./Hc-Sr04.h
+[; ;./Hc-Sr04.h: 16:     float Get_Distance(void){
+[v _Get_Distance `(f ~T0 @X0 1 ef ]
+{
+[e :U _Get_Distance ]
+[f ]
+"18
+[; ;./Hc-Sr04.h: 18:         float Time, Distance;
+[v _Time `f ~T0 @X0 1 a ]
+[v _Distance `f ~T0 @X0 1 a ]
+"21
+[; ;./Hc-Sr04.h: 21:         do { LATDbits.LATD0 = 1; } while(0);
+[e :U 891 ]
+{
+[e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 890 ]
+"22
+[; ;./Hc-Sr04.h: 22:        _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"24
+[; ;./Hc-Sr04.h: 24:         do { LATDbits.LATD0 = 0; } while(0);
+[e :U 894 ]
+{
+[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
+}
+[e :U 893 ]
+"26
+[; ;./Hc-Sr04.h: 26:        while(PORTDbits.RD1==0)
+[e $U 895  ]
+[e :U 896 ]
+"27
+[; ;./Hc-Sr04.h: 27:            ;
+[e :U 895 ]
+"26
+[; ;./Hc-Sr04.h: 26:        while(PORTDbits.RD1==0)
+[e $ == -> . . _PORTDbits 0 1 `i -> 0 `i 896  ]
+[e :U 897 ]
+"29
+[; ;./Hc-Sr04.h: 29:         TMR0_StartTimer();
+[e ( _TMR0_StartTimer ..  ]
+"30
+[; ;./Hc-Sr04.h: 30:        while(PORTDbits.RD1==1)
+[e $U 898  ]
+[e :U 899 ]
+"31
+[; ;./Hc-Sr04.h: 31:            ;
+[e :U 898 ]
+"30
+[; ;./Hc-Sr04.h: 30:        while(PORTDbits.RD1==1)
+[e $ == -> . . _PORTDbits 0 1 `i -> 1 `i 899  ]
+[e :U 900 ]
+"32
+[; ;./Hc-Sr04.h: 32:        TMR0_StopTimer();
+[e ( _TMR0_StopTimer ..  ]
+"34
+[; ;./Hc-Sr04.h: 34:        Time = TMR0_ReadTimer();
+[e = _Time -> ( _TMR0_ReadTimer ..  `f ]
+"38
+[; ;./Hc-Sr04.h: 38:        TMR0_WriteTimer(0x00);
+[e ( _TMR0_WriteTimer (1 -> -> 0 `i `us ]
+"39
+[; ;./Hc-Sr04.h: 39:        Distance = Time/59;
+[e = _Distance / _Time -> -> 59 `i `f ]
+"40
+[; ;./Hc-Sr04.h: 40:        Distance += 1;
+[e =+ _Distance -> -> 1 `i `f ]
+"43
+[; ;./Hc-Sr04.h: 43:        return Distance;
+[e ) _Distance ]
+[e $UE 888  ]
+"45
+[; ;./Hc-Sr04.h: 45:     }
+[e :UE 888 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49 main.c
-[; ;main.c: 49: void main(void)
+"52 main.c
+[; ;main.c: 52: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"50
-[; ;main.c: 50: {
+"53
+[; ;main.c: 53: {
 {
 [e :U _main ]
 [f ]
-"52
-[; ;main.c: 52:     SYSTEM_Initialize();
+"55
+[; ;main.c: 55:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"53
-[; ;main.c: 53:     Motor_Initalize();
+"56
+[; ;main.c: 56:     Motor_Initalize();
 [e ( _Motor_Initalize ..  ]
-"71
-[; ;main.c: 71:     while (1)
-[e :U 877 ]
-"72
-[; ;main.c: 72:     {
-{
-"73
-[; ;main.c: 73:         {
-{
-"75
-[; ;main.c: 75:         Chair_Position("F0RWARD");
-[e ( _Chair_Position (1 :s 6C ]
-"76
-[; ;main.c: 76:         _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"57
+[; ;main.c: 57:     float d;
+[v _d `f ~T0 @X0 1 a ]
+"74
+[; ;main.c: 74:     printf("Hello from MPLAB Xpress! \n \r");
+[e ( _printf :s 7C ]
 "77
-[; ;main.c: 77:         Chair_Position("STOP");
-[e ( _Chair_Position (1 :s 7C ]
+[; ;main.c: 77:     while (1)
+[e :U 903 ]
 "78
-[; ;main.c: 78:         _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 78:     {
+{
 "79
-[; ;main.c: 79:         Chair_Position("BACK");
-[e ( _Chair_Position (1 :s 8C ]
+[; ;main.c: 79:                   do { LATAbits.LATA2 = 0; } while(0);
+[e :U 907 ]
+{
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 906 ]
 "80
-[; ;main.c: 80:         _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 80:         do { LATAbits.LATA1 = 1; } while(0);
+[e :U 910 ]
+{
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+}
+[e :U 909 ]
 "81
-[; ;main.c: 81:         Chair_Position("STOP");
-[e ( _Chair_Position (1 :s 9C ]
+[; ;main.c: 81:         do { LATAbits.LATA0 = 1; } while(0);
+[e :U 913 ]
+{
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 912 ]
 "82
-[; ;main.c: 82:         _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 82:             Chair_Position("F0RWARD");
+[e ( _Chair_Position (1 :s 8C ]
 "83
-[; ;main.c: 83:         Chair_Position("LEFT");
-[e ( _Chair_Position (1 :s 10C ]
+[; ;main.c: 83:             printf("Moving");
+[e ( _printf :s 9C ]
 "84
-[; ;main.c: 84:         _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"85
-[; ;main.c: 85:         Chair_Position("RIGHT");
-[e ( _Chair_Position (1 :s 11C ]
-"86
-[; ;main.c: 86:         _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"88
-[; ;main.c: 88:     }
+[; ;main.c: 84:             _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"100
+[; ;main.c: 100:     }
 }
-"89
-[; ;main.c: 89:     }}
+[e :U 902 ]
+[e $U 903  ]
+[e :U 904 ]
+"102
+[; ;main.c: 102: }
+[e :UE 901 ]
 }
-[e :U 876 ]
-[e $U 877  ]
-[e :U 878 ]
-[e :UE 875 ]
-}
-[a 4C 82 73 71 72 84 0 ]
-[a 11C 82 73 71 72 84 0 ]
-[a 3C 76 69 70 84 0 ]
-[a 10C 76 69 70 84 0 ]
-[a 5C 83 84 79 80 0 ]
-[a 7C 83 84 79 80 0 ]
-[a 9C 83 84 79 80 0 ]
-[a 2C 66 65 67 75 0 ]
-[a 8C 66 65 67 75 0 ]
-[a 1C 70 79 82 87 65 82 68 0 ]
-[a 6C 70 48 82 87 65 82 68 0 ]
+[p f _printf 8388608 ]
+[a 1C 111 107 0 ]
+[a 9C 77 111 118 105 110 103 0 ]
+[a 5C 82 73 71 72 84 0 ]
+[a 4C 76 69 70 84 0 ]
+[a 6C 83 84 79 80 0 ]
+[a 3C 66 65 67 75 0 ]
+[a 2C 70 79 82 87 65 82 68 0 ]
+[a 8C 70 48 82 87 65 82 68 0 ]
+[a 7C 72 101 108 108 111 32 102 114 111 109 32 77 80 76 65 66 32 88 112 114 101 115 115 33 32 10 32 13 0 ]
