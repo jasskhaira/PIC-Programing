@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/pin_manager.c"
+# 1 "mcc_generated_files/eusart2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/pin_manager.c" 2
-# 49 "mcc_generated_files/pin_manager.c"
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 54 "mcc_generated_files/pin_manager.h"
+# 1 "mcc_generated_files/eusart2.c" 2
+# 50 "mcc_generated_files/eusart2.c"
+# 1 "mcc_generated_files/eusart2.h" 1
+# 54 "mcc_generated_files/eusart2.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9523,57 +9523,241 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 54 "mcc_generated_files/pin_manager.h" 2
-# 289 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 301 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 49 "mcc_generated_files/pin_manager.c" 2
+# 54 "mcc_generated_files/eusart2.h" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdbool.h" 1 3
+# 55 "mcc_generated_files/eusart2.h" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+# 173 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int32_t;
 
 
 
 
 
+typedef long long int64_t;
+# 188 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
 
-void PIN_MANAGER_Initialize(void)
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 209 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 229 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
+# 56 "mcc_generated_files/eusart2.h" 2
+# 75 "mcc_generated_files/eusart2.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart2_status_t;
+# 110 "mcc_generated_files/eusart2.h"
+void EUSART2_Initialize(void);
+# 158 "mcc_generated_files/eusart2.h"
+_Bool EUSART2_is_tx_ready(void);
+# 206 "mcc_generated_files/eusart2.h"
+_Bool EUSART2_is_rx_ready(void);
+# 253 "mcc_generated_files/eusart2.h"
+_Bool EUSART2_is_tx_done(void);
+# 301 "mcc_generated_files/eusart2.h"
+eusart2_status_t EUSART2_get_last_status(void);
+# 321 "mcc_generated_files/eusart2.h"
+uint8_t EUSART2_Read(void);
+# 341 "mcc_generated_files/eusart2.h"
+void EUSART2_Write(uint8_t txData);
+# 361 "mcc_generated_files/eusart2.h"
+void EUSART2_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 379 "mcc_generated_files/eusart2.h"
+void EUSART2_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 397 "mcc_generated_files/eusart2.h"
+void EUSART2_SetErrorHandler(void (* interruptHandler)(void));
+# 50 "mcc_generated_files/eusart2.c" 2
+
+
+volatile eusart2_status_t eusart2RxLastError;
+
+
+
+
+
+void (*EUSART2_FramingErrorHandler)(void);
+void (*EUSART2_OverrunErrorHandler)(void);
+void (*EUSART2_ErrorHandler)(void);
+
+void EUSART2_DefaultFramingErrorHandler(void);
+void EUSART2_DefaultOverrunErrorHandler(void);
+void EUSART2_DefaultErrorHandler(void);
+
+void EUSART2_Initialize(void)
 {
 
 
 
-    LATE = 0x00;
-    LATD = 0x04;
-    LATA = 0x08;
-    LATB = 0x00;
-    LATC = 0x02;
+    BAUDCON2 = 0x08;
 
 
+    RCSTA2 = 0x90;
 
 
-    TRISE = 0x06;
-    TRISA = 0xC0;
-    TRISB = 0xFD;
-    TRISC = 0xBF;
-    TRISD = 0xBA;
+    TXSTA2 = 0x24;
 
 
+    SPBRG2 = 0xCF;
 
 
-    ANSELD = 0x38;
-    ANSELC = 0x3C;
-    ANSELB = 0x3C;
-    ANSELE = 0x06;
-    ANSELA = 0x00;
+    SPBRGH2 = 0x00;
 
 
+    EUSART2_SetFramingErrorHandler(EUSART2_DefaultFramingErrorHandler);
+    EUSART2_SetOverrunErrorHandler(EUSART2_DefaultOverrunErrorHandler);
+    EUSART2_SetErrorHandler(EUSART2_DefaultErrorHandler);
 
+    eusart2RxLastError.status = 0;
 
-    WPUB = 0x00;
-    INTCON2bits.nRBPU = 1;
-# 97 "mcc_generated_files/pin_manager.c"
 }
 
-void PIN_MANAGER_IOC(void)
+_Bool EUSART2_is_tx_ready(void)
 {
+    return (_Bool)(PIR3bits.TX2IF && TXSTA2bits.TXEN);
+}
 
-    INTCONbits.RBIF = 0;
+_Bool EUSART2_is_rx_ready(void)
+{
+    return (_Bool)(PIR3bits.RC2IF);
+}
+
+_Bool EUSART2_is_tx_done(void)
+{
+    return TXSTA2bits.TRMT;
+}
+
+eusart2_status_t EUSART2_get_last_status(void){
+    return eusart2RxLastError;
+}
+
+uint8_t EUSART2_Read(void)
+{
+    while(!PIR3bits.RC2IF)
+    {
+    }
+
+    eusart2RxLastError.status = 0;
+
+    if(1 == RCSTA2bits.OERR)
+    {
+
+
+        RCSTA2bits.CREN = 0;
+        RCSTA2bits.CREN = 1;
+    }
+
+    return RCREG2;
+}
+
+void EUSART2_Write(uint8_t txData)
+{
+    while(0 == PIR3bits.TX2IF)
+    {
+    }
+
+    TXREG2 = txData;
+}
+
+
+
+
+void EUSART2_DefaultFramingErrorHandler(void){}
+
+void EUSART2_DefaultOverrunErrorHandler(void){
+
+
+    RCSTA2bits.CREN = 0;
+    RCSTA2bits.CREN = 1;
+
+}
+
+void EUSART2_DefaultErrorHandler(void){
+}
+
+void EUSART2_SetFramingErrorHandler(void (* interruptHandler)(void)){
+    EUSART2_FramingErrorHandler = interruptHandler;
+}
+
+void EUSART2_SetOverrunErrorHandler(void (* interruptHandler)(void)){
+    EUSART2_OverrunErrorHandler = interruptHandler;
+}
+
+void EUSART2_SetErrorHandler(void (* interruptHandler)(void)){
+    EUSART2_ErrorHandler = interruptHandler;
 }

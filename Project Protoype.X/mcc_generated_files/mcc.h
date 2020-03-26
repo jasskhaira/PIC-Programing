@@ -54,6 +54,7 @@
 #include <conio.h>
 #include "tmr1.h"
 #include "eusart1.h"
+#include "eusart2.h"
 
 
 

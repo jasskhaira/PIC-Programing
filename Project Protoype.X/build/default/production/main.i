@@ -9528,9 +9528,9 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 232 "./mcc_generated_files/pin_manager.h"
+# 289 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 244 "./mcc_generated_files/pin_manager.h"
+# 301 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -9848,9 +9848,42 @@ void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 398 "./mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 # 56 "./mcc_generated_files/mcc.h" 2
-# 71 "./mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/eusart2.h" 1
+# 75 "./mcc_generated_files/eusart2.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart2_status_t;
+# 110 "./mcc_generated_files/eusart2.h"
+void EUSART2_Initialize(void);
+# 158 "./mcc_generated_files/eusart2.h"
+_Bool EUSART2_is_tx_ready(void);
+# 206 "./mcc_generated_files/eusart2.h"
+_Bool EUSART2_is_rx_ready(void);
+# 253 "./mcc_generated_files/eusart2.h"
+_Bool EUSART2_is_tx_done(void);
+# 301 "./mcc_generated_files/eusart2.h"
+eusart2_status_t EUSART2_get_last_status(void);
+# 321 "./mcc_generated_files/eusart2.h"
+uint8_t EUSART2_Read(void);
+# 341 "./mcc_generated_files/eusart2.h"
+void EUSART2_Write(uint8_t txData);
+# 361 "./mcc_generated_files/eusart2.h"
+void EUSART2_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 379 "./mcc_generated_files/eusart2.h"
+void EUSART2_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 397 "./mcc_generated_files/eusart2.h"
+void EUSART2_SetErrorHandler(void (* interruptHandler)(void));
+# 57 "./mcc_generated_files/mcc.h" 2
+# 72 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "./mcc_generated_files/mcc.h"
+# 85 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 1 "main.c" 2
 
@@ -10038,15 +10071,16 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 # 1 "./Hc_Sr05.h" 1
 # 18 "./Hc_Sr05.h"
-     float Time, Distance;
+     float Time=0, Distance=0;
 
 
 
 
 
 
-     float Get_Distance(void){
-
+     float Get_Distance_Front(void){
+        Distance=0;
+        Time=0;
         do { LATDbits.LATD0 = 1; } while(0);
        _delay((unsigned long)((10)*(8000000/4000000.0)));
 
@@ -10070,32 +10104,273 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
        return Distance;
 
     }
+
+
+
+
+
+
+     float Get_Distance_Rear(void){
+        Distance=0;
+        Time=0;
+        do { LATBbits.LATB1 = 1; } while(0);
+       _delay((unsigned long)((10)*(8000000/4000000.0)));
+
+
+       do { LATBbits.LATB1 = 0; } while(0);
+
+       while(PORTBbits.RB0==0)
+           ;
+
+       TMR1_StartTimer();
+       while(PORTBbits.RB0==1)
+           ;
+       Time = TMR1_ReadTimer();
+       TMR1_StopTimer();
+
+       TMR1_WriteTimer(0x00);
+       Distance = Time/58.82;
+       Distance += 1;
+
+
+       return Distance;
+
+    }
 # 3 "main.c" 2
 
+# 1 "./Esp_8266.h" 1
+# 36 "./Esp_8266.h"
+__attribute__((inline)) unsigned char _esp8266_waitResponse(void) {
+    unsigned char so_far[6] = {0,0,0,0,0,0};
+    unsigned const char lengths[6] = {2,5,4,9,6,6};
+    unsigned const char* strings[6] = {"OK", "ready", "FAIL", "no change", "Linked", "Unlink"};
+    unsigned const char responses[6] = {1, 2, 3, 4, 5, 6};
+    unsigned char received;
+    unsigned char response;
+    _Bool continue_loop = 1;
+    while (continue_loop) {
+        received = EUSART1_Read();
+        for (unsigned char i = 0; i < 6; i++) {
+            if (strings[i][so_far[i]] == received) {
+                so_far[i]++;
+                if (so_far[i] == lengths[i]) {
+                    response = responses[i];
+                    continue_loop = 0;
+                }
+            } else {
+                so_far[i] = 0;
+            }
+        }
+    }
+    return response;
+}
 
 
 
+void _esp8266_print(unsigned const char *ptr) {
+    while (*ptr != 0) {
+        EUSART1_Write(*ptr++);
+    }
+}
+
+
+__attribute__((inline)) uint16_t _esp8266_waitFor(unsigned char *string) {
+    unsigned char so_far = 0;
+    unsigned char received;
+    uint16_t counter = 0;
+    do {
+        received = EUSART1_Read();
+        counter++;
+        if (received == string[so_far]) {
+            so_far++;
+        } else {
+            so_far = 0;
+        }
+    } while (string[so_far] != 0);
+    return counter;
+}
+
+
+
+
+
+void ESP8266_send_string(char* st_pt)
+{
+    while(*st_pt)
+        EUSART1_Write(*st_pt++);
+}
+# 105 "./Esp_8266.h"
+_Bool esp8266_isStarted(void) {
+    _esp8266_print("AT\r\n");
+    return (_esp8266_waitResponse() == 1);
+}
+# 118 "./Esp_8266.h"
+_Bool esp8266_restart(void) {
+    _esp8266_print("AT+RST\r\n");
+    if (_esp8266_waitResponse() != 1) {
+        return 0;
+    }
+    return (_esp8266_waitResponse() == 2);
+}
+# 136 "./Esp_8266.h"
+void esp8266_echoCmds(_Bool echo) {
+    _esp8266_print("ATE");
+    if (echo) {
+        EUSART1_Write('1');
+    } else {
+        EUSART1_Write('0');
+    }
+    _esp8266_print("\r\n");
+    _esp8266_waitFor("OK");
+}
+# 157 "./Esp_8266.h"
+void esp8266_mode(unsigned char mode) {
+    _esp8266_print("AT+CWMODE=");
+    EUSART1_Write(mode + '0');
+    _esp8266_print("\r\n");
+    _esp8266_waitResponse();
+}
+# 173 "./Esp_8266.h"
+unsigned char esp8266_connect(unsigned char* ssid, unsigned char* pass) {
+    _esp8266_print("AT+CWJAP=\"");
+    _esp8266_print(ssid);
+    _esp8266_print("\",\"");
+    _esp8266_print(pass);
+    _esp8266_print("\"\r\n");
+    return _esp8266_waitResponse();
+}
+
+
+
+
+
+
+void esp8266_disconnect(void) {
+    _esp8266_print("AT+CWQAP\r\n");
+    _esp8266_waitFor("OK");
+}
+# 203 "./Esp_8266.h"
+void esp8266_IP(unsigned char* store_in) {
+    _esp8266_print("AT+CIFSR\r\n");
+    unsigned char received;
+    do {
+        received = EUSART1_Read();
+    } while (received < '0' || received > '9');
+    for (unsigned char i = 0; i < 4; i++) {
+        store_in[i] = 0;
+        do {
+            store_in[i] = 10 * store_in[i] + received - '0';
+            received = EUSART1_Read();
+        } while (received >= '0' && received <= '9');
+        received = EUSART1_Read();
+    }
+    _esp8266_waitFor("OK");
+}
+# 231 "./Esp_8266.h"
+_Bool esp8266_start(unsigned char protocol, char* ip, unsigned char port) {
+    _esp8266_print("AT+CIPSTART=\"");
+    if (protocol == 1) {
+        _esp8266_print("TCP");
+    } else {
+        _esp8266_print("UDP");
+    }
+    _esp8266_print("\",\"");
+    _esp8266_print(ip);
+    _esp8266_print("\",");
+    unsigned char port_str[5] = "\0\0\0\0";
+    sprintf(port_str, "%u", port);
+    _esp8266_print(port_str);
+    _esp8266_print("\r\n");
+    if (_esp8266_waitResponse() != 1) {
+        return 0;
+    }
+    if (_esp8266_waitResponse() != 5) {
+        return 0;
+    }
+    return 1;
+}
+# 264 "./Esp_8266.h"
+_Bool esp8266_send(unsigned char* data) {
+    unsigned char length_str[6] = "\0\0\0\0\0";
+    sprintf(length_str, "%u", strlen(data));
+    _esp8266_print("AT+CIPSEND=");
+    _esp8266_print(length_str);
+    _esp8266_print("\r\n");
+    while (EUSART1_Read() != '>');
+    _esp8266_print(data);
+    if (_esp8266_waitResponse() == 1) {
+        return 1;
+    }
+    return 0;
+}
+# 289 "./Esp_8266.h"
+void esp8266_receive(unsigned char* store_in, uint16_t max_length, _Bool discard_headers) {
+    _esp8266_waitFor("+IPD,");
+    uint16_t length = 0;
+    unsigned char received = EUSART1_Read();
+    do {
+        length = length * 10 + received - '0';
+        received = EUSART1_Read();
+    } while (received >= '0' && received <= '9');
+
+    if (discard_headers) {
+        length -= _esp8266_waitFor("\r\n\r\n");
+    }
+
+    if (length < max_length) {
+        max_length = length;
+    }
+
+
+
+
+    uint16_t i;
+    for (i = 0; i < max_length; i++) {
+        store_in[i] = EUSART1_Read();
+    }
+    store_in[i] = 0;
+    for (; i < length; i++) {
+        EUSART1_Read();
+    }
+    _esp8266_waitFor("OK");
+}
+# 4 "main.c" 2
+# 18 "main.c"
 void main(void)
 {
 
     SYSTEM_Initialize();
+    char rec[100], Direction;
+    float Distance=0, Time=0;
 
-    float Distance=0,Time=0;
 
+
+    esp8266_isStarted();
+
+    esp8266_mode(1);
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+    esp8266_connect("Kajal","KajalKajal");
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+    esp8266_start("TCP","api.thingspeak.com","80");
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+    esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=88.9990");
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+# 50 "main.c"
     while (1)
     {
-         _delay((unsigned long)((10)*(8000000/4000.0)));
-        Distance=Get_Distance();
+        _delay((unsigned long)((900)*(8000000/4000.0)));
+        _delay((unsigned long)((900)*(8000000/4000.0)));
+             esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=33.9990");
+         _delay((unsigned long)((900)*(8000000/4000.0)));
+         _delay((unsigned long)((900)*(8000000/4000.0)));
+# 119 "main.c"
+          _delay((unsigned long)((500)*(8000000/4000.0)));
 
-        if(Distance>=8){
-        Chair_Position("FORWARD");
-
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-        }
-        else
-        Chair_Position("STOP");
-
-        _delay((unsigned long)((10)*(8000000/4000.0)));
 
     }
+
+
+
+
+
 }

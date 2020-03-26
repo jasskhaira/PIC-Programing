@@ -3,8 +3,22 @@
 [d edition pro ]
 [d chip 18F43K22 ]
 [d frameptr 4065 ]
-"25 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Hc_Sr05.h
-[v _Get_Distance Get_Distance `(f  1 e 4 0 ]
+"36 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Esp_8266.h
+[v __esp8266_waitResponse _esp8266_waitResponse `T(uc  1 e 1 0 ]
+"63
+[v __esp8266_print _esp8266_print `(v  1 e 1 0 ]
+"70
+[v __esp8266_waitFor _esp8266_waitFor `T(us  1 e 2 0 ]
+"105
+[v _esp8266_isStarted esp8266_isStarted `(a  1 e 1 0 ]
+"157
+[v _esp8266_mode esp8266_mode `(v  1 e 1 0 ]
+"173
+[v _esp8266_connect esp8266_connect `(uc  1 e 1 0 ]
+"231
+[v _esp8266_start esp8266_start `(a  1 e 1 0 ]
+"264
+[v _esp8266_send esp8266_send `(a  1 e 1 0 ]
 "20 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Motors.h
 [v _Leftwheel_Forward Leftwheel_Forward `(v  1 e 1 0 ]
 "28
@@ -27,12 +41,16 @@
 [v _Move_Right Move_Right `(v  1 e 1 0 ]
 "98
 [v _Stop Stop `(v  1 e 1 0 ]
-"116
-[v _Chair_Position Chair_Position `(i  1 e 2 0 ]
+"72 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+[v _pad pad `(i  1 s 2 pad ]
+"593
+[v _utoa utoa `(i  1 s 2 utoa ]
+"670
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"1368
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftadd.c
@@ -43,6 +61,16 @@
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lodiv.c
+[v ___lodiv __lodiv `(uo  1 e 8 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lomod.c
+[v ___lomod __lomod `(uo  1 e 8 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -53,13 +81,17 @@
 [v ___flmul __flmul `(d  1 e 4 0 ]
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"7 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
+"18 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "66 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
@@ -67,6 +99,8 @@
 [v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
 "132
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"146
+[v _putch putch `(v  1 e 1 0 ]
 "153
 [v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
 "155
@@ -79,9 +113,23 @@
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
 "174
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+"66 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart2.c
+[v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
+"144
+[v _EUSART2_DefaultFramingErrorHandler EUSART2_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"146
+[v _EUSART2_DefaultOverrunErrorHandler EUSART2_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"154
+[v _EUSART2_DefaultErrorHandler EUSART2_DefaultErrorHandler `(v  1 e 1 0 ]
+"157
+[v _EUSART2_SetFramingErrorHandler EUSART2_SetFramingErrorHandler `(v  1 e 1 0 ]
+"161
+[v _EUSART2_SetOverrunErrorHandler EUSART2_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"165
+[v _EUSART2_SetErrorHandler EUSART2_SetErrorHandler `(v  1 e 1 0 ]
 "50 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"59
+"60
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "55 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
@@ -110,7 +158,135 @@
 [v _ANSELE ANSELE `VEuc  1 e 1 @3900 ]
 "2719
 [v _WPUB WPUB `VEuc  1 e 1 @3937 ]
-[s S686 . 1 `uc 1 RD0 1 0 :1:0 
+"4288
+[v _BAUDCON2 BAUDCON2 `VEuc  1 e 1 @3952 ]
+"4550
+[v _RCSTA2 RCSTA2 `VEuc  1 e 1 @3953 ]
+[s S149 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4595
+[s S158 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S717 . 1 `uc 1 RX9D2 1 0 :1:0 
+`uc 1 OERR2 1 0 :1:1 
+`uc 1 FERR2 1 0 :1:2 
+`uc 1 ADDEN2 1 0 :1:3 
+`uc 1 CREN2 1 0 :1:4 
+`uc 1 SREN2 1 0 :1:5 
+`uc 1 RX92 1 0 :1:6 
+`uc 1 SPEN2 1 0 :1:7 
+]
+[s S726 . 1 `uc 1 RCD82 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC8_92 1 0 :1:6 
+]
+[s S730 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC92 1 0 :1:6 
+]
+[u S733 . 1 `S149 1 . 1 0 `S158 1 . 1 0 `S717 1 . 1 0 `S726 1 . 1 0 `S730 1 . 1 0 ]
+[v _RCSTA2bits RCSTA2bits `VES733  1 e 1 @3953 ]
+"4838
+[v _TXSTA2 TXSTA2 `VEuc  1 e 1 @3954 ]
+[s S100 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"4875
+[s S665 . 1 `uc 1 TX9D2 1 0 :1:0 
+`uc 1 TRMT2 1 0 :1:1 
+`uc 1 BRGH2 1 0 :1:2 
+`uc 1 SENDB2 1 0 :1:3 
+`uc 1 SYNC2 1 0 :1:4 
+`uc 1 TXEN2 1 0 :1:5 
+`uc 1 TX92 1 0 :1:6 
+`uc 1 CSRC2 1 0 :1:7 
+]
+[s S674 . 1 `uc 1 TXD82 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_92 1 0 :1:6 
+]
+[u S678 . 1 `S100 1 . 1 0 `S665 1 . 1 0 `S674 1 . 1 0 ]
+[v _TXSTA2bits TXSTA2bits `VES678  1 e 1 @3954 ]
+"5090
+[v _TXREG2 TXREG2 `VEuc  1 e 1 @3955 ]
+"5128
+[v _RCREG2 RCREG2 `VEuc  1 e 1 @3956 ]
+"5166
+[v _SPBRG2 SPBRG2 `VEuc  1 e 1 @3957 ]
+"5204
+[v _SPBRGH2 SPBRGH2 `VEuc  1 e 1 @3958 ]
+[s S1091 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"6635
+[s S1100 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 CCP2 1 0 :1:3 
+`uc 1 KBI0 1 0 :1:4 
+`uc 1 KBI1 1 0 :1:5 
+`uc 1 KBI2 1 0 :1:6 
+`uc 1 KBI3 1 0 :1:7 
+]
+[s S1109 . 1 `uc 1 AN12 1 0 :1:0 
+`uc 1 AN10 1 0 :1:1 
+`uc 1 AN8 1 0 :1:2 
+`uc 1 AN9 1 0 :1:3 
+`uc 1 AN11 1 0 :1:4 
+`uc 1 AN13 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S1118 . 1 `uc 1 FLT0 1 0 :1:0 
+`uc 1 C12IN3M 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 C12IN2M 1 0 :1:3 
+`uc 1 T5G 1 0 :1:4 
+`uc 1 T1G 1 0 :1:5 
+]
+[s S1125 . 1 `uc 1 SRI 1 0 :1:0 
+`uc 1 C12IN3N 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 C12IN2N 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CCP3 1 0 :1:5 
+]
+[s S1132 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CTED1 1 0 :1:2 
+`uc 1 CTED2 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T3CKI 1 0 :1:5 
+]
+[s S1138 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 P2A 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 P3A 1 0 :1:5 
+]
+[s S1143 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S1146 . 1 `S1091 1 . 1 0 `S1100 1 . 1 0 `S1109 1 . 1 0 `S1118 1 . 1 0 `S1125 1 . 1 0 `S1132 1 . 1 0 `S1138 1 . 1 0 `S1143 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES1146  1 e 1 @3969 ]
+[s S940 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -120,7 +296,7 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "7205
-[s S695 . 1 `uc 1 . 1 0 :2:0 
+[s S949 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 P2B 1 0 :1:2 
 `uc 1 P2C 1 0 :1:3 
 `uc 1 P2D 1 0 :1:4 
@@ -128,16 +304,16 @@
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
-[s S703 . 1 `uc 1 . 1 0 :1:0 
+[s S957 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP4 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 TX2 1 0 :1:6 
 `uc 1 RX2 1 0 :1:7 
 ]
-[s S709 . 1 `uc 1 . 1 0 :3:0 
+[s S963 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_SS2 1 0 :1:3 
 ]
-[s S712 . 1 `uc 1 SCK2 1 0 :1:0 
+[s S966 . 1 `uc 1 SCK2 1 0 :1:0 
 `uc 1 SDI2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 nSS2 1 0 :1:3 
@@ -146,12 +322,12 @@
 `uc 1 CK2 1 0 :1:6 
 `uc 1 DT2 1 0 :1:7 
 ]
-[s S721 . 1 `uc 1 SCL2 1 0 :1:0 
+[s S975 . 1 `uc 1 SCL2 1 0 :1:0 
 `uc 1 SDA2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SS2 1 0 :1:3 
 ]
-[s S726 . 1 `uc 1 AN20 1 0 :1:0 
+[s S980 . 1 `uc 1 AN20 1 0 :1:0 
 `uc 1 AN21 1 0 :1:1 
 `uc 1 AN22 1 0 :1:2 
 `uc 1 AN23 1 0 :1:3 
@@ -160,11 +336,11 @@
 `uc 1 AN26 1 0 :1:6 
 `uc 1 AN27 1 0 :1:7 
 ]
-[u S735 . 1 `S686 1 . 1 0 `S695 1 . 1 0 `S703 1 . 1 0 `S709 1 . 1 0 `S712 1 . 1 0 `S721 1 . 1 0 `S726 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES735  1 e 1 @3971 ]
+[u S989 . 1 `S940 1 . 1 0 `S949 1 . 1 0 `S957 1 . 1 0 `S963 1 . 1 0 `S966 1 . 1 0 `S975 1 . 1 0 `S980 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES989  1 e 1 @3971 ]
 "7560
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-[s S574 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S828 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -174,7 +350,7 @@
 `uc 1 LATA7 1 0 :1:7 
 ]
 "7587
-[s S583 . 1 `uc 1 LA0 1 0 :1:0 
+[s S837 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -183,15 +359,36 @@
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S592 . 1 `S574 1 . 1 0 `S583 1 . 1 0 ]
-[v _LATAbits LATAbits `VES592  1 e 1 @3977 ]
+[u S846 . 1 `S828 1 . 1 0 `S837 1 . 1 0 ]
+[v _LATAbits LATAbits `VES846  1 e 1 @3977 ]
 "7672
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S1051 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"7699
+[s S1060 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S1069 . 1 `S1051 1 . 1 0 `S1060 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1069  1 e 1 @3978 ]
 "7784
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
 "7896
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S640 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S894 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -201,7 +398,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "7923
-[s S649 . 1 `uc 1 LD0 1 0 :1:0 
+[s S903 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -210,21 +407,21 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S658 . 1 `S640 1 . 1 0 `S649 1 . 1 0 ]
-[v _LATDbits LATDbits `VES658  1 e 1 @3980 ]
+[u S912 . 1 `S894 1 . 1 0 `S903 1 . 1 0 ]
+[v _LATDbits LATDbits `VES912  1 e 1 @3980 ]
 "8008
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
-[s S614 . 1 `uc 1 LATE0 1 0 :1:0 
+[s S868 . 1 `uc 1 LATE0 1 0 :1:0 
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 ]
 "8025
-[s S618 . 1 `uc 1 LE0 1 0 :1:0 
+[s S872 . 1 `uc 1 LE0 1 0 :1:0 
 `uc 1 LE1 1 0 :1:1 
 `uc 1 LE2 1 0 :1:2 
 ]
-[u S622 . 1 `S614 1 . 1 0 `S618 1 . 1 0 ]
-[v _LATEbits LATEbits `VES622  1 e 1 @3981 ]
+[u S876 . 1 `S868 1 . 1 0 `S872 1 . 1 0 ]
+[v _LATEbits LATEbits `VES876  1 e 1 @3981 ]
 "8060
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "8282
@@ -253,21 +450,26 @@
 ]
 [u S83 . 1 `S70 1 . 1 0 `S78 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES83  1 e 1 @3998 ]
+[s S624 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+`uc 1 TMR3GIF 1 0 :1:1 
+`uc 1 TMR5GIF 1 0 :1:2 
+`uc 1 CTMUIF 1 0 :1:3 
+`uc 1 TX2IF 1 0 :1:4 
+`uc 1 RC2IF 1 0 :1:5 
+`uc 1 BCL2IF 1 0 :1:6 
+`uc 1 SSP2IF 1 0 :1:7 
+]
+"10036
+[s S633 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBNIF 1 0 :1:4 
+]
+[u S638 . 1 `S624 1 . 1 0 `S633 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES638  1 e 1 @4004 ]
 "10345
 [v _RCSTA1 RCSTA1 `VEuc  1 e 1 @4011 ]
-[s S149 . 1 `uc 1 RX9D 1 0 :1:0 
-`uc 1 OERR 1 0 :1:1 
-`uc 1 FERR 1 0 :1:2 
-`uc 1 ADDEN 1 0 :1:3 
-`uc 1 CREN 1 0 :1:4 
-`uc 1 SREN 1 0 :1:5 
-`uc 1 RX9 1 0 :1:6 
-`uc 1 SPEN 1 0 :1:7 
-]
 "10398
-[s S158 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 ADEN 1 0 :1:3 
-]
 [s S161 . 1 `uc 1 RX9D1 1 0 :1:0 
 `uc 1 OERR1 1 0 :1:1 
 `uc 1 FERR1 1 0 :1:2 
@@ -291,15 +493,6 @@
 [v _RCSTA1bits RCSTA1bits `VES180  1 e 1 @4011 ]
 "10801
 [v _TXSTA1 TXSTA1 `VEuc  1 e 1 @4012 ]
-[s S100 . 1 `uc 1 TX9D 1 0 :1:0 
-`uc 1 TRMT 1 0 :1:1 
-`uc 1 BRGH 1 0 :1:2 
-`uc 1 SENDB 1 0 :1:3 
-`uc 1 SYNC 1 0 :1:4 
-`uc 1 TXEN 1 0 :1:5 
-`uc 1 TX9 1 0 :1:6 
-`uc 1 CSRC 1 0 :1:7 
-]
 "10842
 [s S109 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
@@ -328,11 +521,11 @@
 [v _BAUDCON1 BAUDCON1 `VEuc  1 e 1 @4024 ]
 "15539
 [v _T1GCON T1GCON `VEuc  1 e 1 @4044 ]
-[s S492 . 1 `uc 1 . 1 0 :3:0 
+[s S496 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO_NOT_DONE 1 0 :1:3 
 ]
 "15569
-[s S495 . 1 `uc 1 T1GSS 1 0 :2:0 
+[s S499 . 1 `uc 1 T1GSS 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -340,30 +533,30 @@
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 TMR1GE 1 0 :1:7 
 ]
-[s S503 . 1 `uc 1 T1GSS0 1 0 :1:0 
+[s S507 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T1G_DONE 1 0 :1:3 
 ]
-[s S508 . 1 `uc 1 . 1 0 :3:0 
+[s S512 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO 1 0 :1:3 
 ]
-[u S511 . 1 `S492 1 . 1 0 `S495 1 . 1 0 `S503 1 . 1 0 `S508 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES511  1 e 1 @4044 ]
+[u S515 . 1 `S496 1 . 1 0 `S499 1 . 1 0 `S507 1 . 1 0 `S512 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES515  1 e 1 @4044 ]
 "15634
 [v _T1CON T1CON `VEuc  1 e 1 @4045 ]
-[s S442 . 1 `uc 1 . 1 0 :2:0 
+[s S446 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
 "15667
-[s S445 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S449 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 T1RD16 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1SOSCEN 1 0 :1:3 
 `uc 1 T1CKPS 1 0 :2:4 
 `uc 1 TMR1CS 1 0 :2:6 
 ]
-[s S452 . 1 `uc 1 . 1 0 :1:0 
+[s S456 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -372,11 +565,11 @@
 `uc 1 TMR1CS0 1 0 :1:6 
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
-[s S461 . 1 `uc 1 . 1 0 :3:0 
+[s S465 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SOSCEN 1 0 :1:3 
 ]
-[u S464 . 1 `S442 1 . 1 0 `S445 1 . 1 0 `S452 1 . 1 0 `S461 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES464  1 e 1 @4045 ]
+[u S468 . 1 `S446 1 . 1 0 `S449 1 . 1 0 `S456 1 . 1 0 `S465 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES468  1 e 1 @4045 ]
 "15747
 [v _TMR1 TMR1 `VEus  1 e 2 @4046 ]
 "15754
@@ -387,11 +580,11 @@
 [v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
 "16012
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S318 . 1 `uc 1 . 1 0 :7:0 
+[s S322 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "16847
-[s S321 . 1 `uc 1 RBIP 1 0 :1:0 
+[s S325 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -400,12 +593,12 @@
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S330 . 1 `uc 1 . 1 0 :7:0 
+[s S334 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S333 . 1 `S318 1 . 1 0 `S321 1 . 1 0 `S330 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES333  1 e 1 @4081 ]
-[s S353 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S337 . 1 `S322 1 . 1 0 `S325 1 . 1 0 `S334 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES337  1 e 1 @4081 ]
+[s S357 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -415,7 +608,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "16924
-[s S362 . 1 `uc 1 . 1 0 :1:0 
+[s S366 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -424,12 +617,20 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S371 . 1 `uc 1 . 1 0 :6:0 
+[s S375 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S375 . 1 `S353 1 . 1 0 `S362 1 . 1 0 `S371 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES375  1 e 1 @4082 ]
+[u S379 . 1 `S357 1 . 1 0 `S366 1 . 1 0 `S375 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES379  1 e 1 @4082 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+[v _flags flags `i  1 s 2 flags ]
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"66
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"69
+[v _nout nout `i  1 s 2 nout ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
@@ -444,26 +645,234 @@
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
+"52 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart2.c
+[v _eusart2RxLastError eusart2RxLastError `VES29  1 e 1 0 ]
+"58
+[v _EUSART2_FramingErrorHandler EUSART2_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"59
+[v _EUSART2_OverrunErrorHandler EUSART2_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"60
+[v _EUSART2_ErrorHandler EUSART2_ErrorHandler `*.37(v  1 e 2 0 ]
 "57 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
-"7 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
+"18 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"12
-[v main@Distance Distance `f  1 a 4 34 ]
-"30
+"128
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
+"231 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Esp_8266.h
+[v _esp8266_start esp8266_start `(a  1 e 1 0 ]
 {
-[v ___flge@ff1 ff1 `d  1 p 4 0 ]
-[v ___flge@ff2 ff2 `d  1 p 4 4 ]
+[v esp8266_start@protocol protocol `uc  1 a 1 wreg ]
+"241
+[v esp8266_start@port_str port_str `[5]uc  1 a 5 13 ]
+"231
+[v esp8266_start@protocol protocol `uc  1 a 1 wreg ]
+[v esp8266_start@ip ip `*.25uc  1 p 2 10 ]
+[v esp8266_start@port port `uc  1 p 1 12 ]
+[v esp8266_start@protocol protocol `uc  1 a 1 18 ]
+"252
+} 0
+"264
+[v _esp8266_send esp8266_send `(a  1 e 1 0 ]
+{
+"265
+[v esp8266_send@length_str length_str `[6]uc  1 a 6 10 ]
+"264
+[v esp8266_send@data data `*.25uc  1 p 2 93 ]
+"276
+} 0
+"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[s S1911 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+"13
+[v sprintf@f f `S1911  1 a 6 4 ]
+"12
+[v sprintf@ap ap `[1]*.39v  1 a 2 2 ]
+"9
+[v sprintf@s s `*.39uc  1 p 2 87 ]
+[v sprintf@fmt fmt `*.25Cuc  1 p 2 89 ]
+"23
+} 0
+"1368 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1371
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 85 ]
+[s S1416 _IO_FILE 0 ]
+"1368
+[v vfprintf@fp fp `*.39S1416  1 p 2 79 ]
+[v vfprintf@fmt fmt `*.25Cuc  1 p 2 81 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 83 ]
+"1382
+} 0
+"670
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+"675
+[v vfpfcnvrt@llu llu `uo  1 a 8 71 ]
+[s S1416 _IO_FILE 0 ]
+"670
+[v vfpfcnvrt@fp fp `*.39S1416  1 p 2 61 ]
+[v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 63 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 65 ]
+"1365
+} 0
+"593
+[v _utoa utoa `(i  1 s 2 utoa ]
+{
+"596
+[v utoa@n n `uo  1 a 8 51 ]
+"595
+[v utoa@i i `i  1 a 2 59 ]
+[v utoa@w w `i  1 a 2 49 ]
+[v utoa@p p `i  1 a 2 47 ]
+[s S1416 _IO_FILE 0 ]
+"593
+[v utoa@fp fp `*.39S1416  1 p 2 29 ]
+[v utoa@d d `uo  1 p 8 31 ]
+"619
+} 0
+"72
+[v _pad pad `(i  1 s 2 pad ]
+{
+"74
+[v pad@w w `i  1 a 2 27 ]
+[v pad@i i `i  1 a 2 25 ]
+[s S1416 _IO_FILE 0 ]
+"72
+[v pad@fp fp `*.39S1416  1 p 2 18 ]
+[v pad@buf buf `*.39uc  1 p 2 20 ]
+[v pad@p p `i  1 p 2 22 ]
+"95
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.35Cuc  1 a 2 2 ]
+"5
+[v strlen@s s `*.35Cuc  1 p 2 0 ]
+"12
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+"11
+[v fputs@i i `i  1 a 2 16 ]
+"10
+[v fputs@c c `uc  1 a 1 15 ]
+"8
+[v fputs@s s `*.39Cuc  1 p 2 11 ]
+[s S1911 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S1911  1 p 2 13 ]
 "19
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 2 ]
+[s S1911 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S1911  1 p 2 4 ]
+"21
+} 0
+"146 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 a 1 wreg ]
+[v putch@txData txData `uc  1 a 1 wreg ]
+"148
+[v putch@txData txData `uc  1 a 1 1 ]
+"149
+} 0
+"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lomod.c
+[v ___lomod __lomod `(uo  1 e 8 0 ]
+{
+"12
+[v ___lomod@counter counter `uc  1 a 1 16 ]
+"9
+[v ___lomod@dividend dividend `uo  1 p 8 0 ]
+[v ___lomod@divisor divisor `uo  1 p 8 8 ]
+"27
+} 0
+"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lodiv.c
+[v ___lodiv __lodiv `(uo  1 e 8 0 ]
+{
+"12
+[v ___lodiv@quotient quotient `uo  1 a 8 16 ]
+"13
+[v ___lodiv@counter counter `uc  1 a 1 24 ]
+"9
+[v ___lodiv@dividend dividend `uo  1 p 8 0 ]
+[v ___lodiv@divisor divisor `uo  1 p 8 8 ]
+"32
+} 0
+"157 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Esp_8266.h
+[v _esp8266_mode esp8266_mode `(v  1 e 1 0 ]
+{
+[v esp8266_mode@mode mode `uc  1 a 1 wreg ]
+[v esp8266_mode@mode mode `uc  1 a 1 wreg ]
+[v esp8266_mode@mode mode `uc  1 a 1 25 ]
+"162
+} 0
+"105
+[v _esp8266_isStarted esp8266_isStarted `(a  1 e 1 0 ]
+{
+"108
+} 0
+"173
+[v _esp8266_connect esp8266_connect `(uc  1 e 1 0 ]
+{
+[v esp8266_connect@ssid ssid `*.25uc  1 p 2 25 ]
+[v esp8266_connect@pass pass `*.25uc  1 p 2 27 ]
+"180
+} 0
+"36
+[v __esp8266_waitResponse _esp8266_waitResponse `T(uc  1 e 1 0 ]
+{
+"46
+[v __esp8266_waitResponse@i i `uc  1 a 1 24 ]
+"39
+[v __esp8266_waitResponse@strings strings `[6]*.25Cuc  1 a 12 3 ]
+"37
+[v __esp8266_waitResponse@so_far so_far `[6]uc  1 a 6 15 ]
+"43
+[v __esp8266_waitResponse@continue_loop continue_loop `a  1 a 1 23 ]
+"42
+[v __esp8266_waitResponse@response response `uc  1 a 1 22 ]
+"41
+[v __esp8266_waitResponse@received received `uc  1 a 1 21 ]
+"38
+[v __esp8266_waitResponse@lengths lengths `C[6]uc  1 s 6 lengths ]
+[v __esp8266_waitResponse@F6573 F6573 `[6]*.25Cuc  1 s 12 F6573 ]
+"40
+[v __esp8266_waitResponse@responses responses `C[6]uc  1 s 6 responses ]
+"59
+} 0
+"113 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+{
+"130
+} 0
+"63 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Esp_8266.h
+[v __esp8266_print _esp8266_print `(v  1 e 1 0 ]
+{
+[v __esp8266_print@ptr ptr `*.35Cuc  1 p 2 1 ]
+"67
+} 0
+"132 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 0 ]
+"139
 } 0
 "50 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"57
+"58
 } 0
 "63 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
@@ -475,10 +884,33 @@
 {
 "97
 } 0
-"59 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/mcc.c
+"60 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"67
+"68
+} 0
+"66 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart2.c
+[v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"161
+[v _EUSART2_SetOverrunErrorHandler EUSART2_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"163
+} 0
+"157
+[v _EUSART2_SetFramingErrorHandler EUSART2_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"159
+} 0
+"165
+[v _EUSART2_SetErrorHandler EUSART2_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"167
 } 0
 "66 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
@@ -502,155 +934,4 @@
 {
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "176
-} 0
-"25 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Hc_Sr05.h
-[v _Get_Distance Get_Distance `(f  1 e 4 0 ]
-{
-"49
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 18 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 17 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 8 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 16 ]
-"44
-} 0
-"11 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 19 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 12 ]
-"20
-[v ___fldiv@new_exp new_exp `s  1 a 2 17 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 24 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 23 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 16 ]
-"11
-[v ___fldiv@b b `d  1 p 4 0 ]
-[v ___fldiv@a a `d  1 p 4 4 ]
-"185
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 15 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 14 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 13 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 12 ]
-"10
-[v ___fladd@b b `d  1 p 4 0 ]
-[v ___fladd@a a `d  1 p 4 4 ]
-"237
-} 0
-"114 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/tmr1.c
-[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
-{
-[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
-"134
-} 0
-"92
-[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
-{
-"96
-} 0
-"86
-[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
-{
-"90
-} 0
-"98
-[v _TMR1_ReadTimer TMR1_ReadTimer `(us  1 e 2 0 ]
-{
-"100
-[v TMR1_ReadTimer@readVal readVal `us  1 a 2 4 ]
-"102
-[v TMR1_ReadTimer@readValLow readValLow `uc  1 a 1 7 ]
-"101
-[v TMR1_ReadTimer@readValHigh readValHigh `uc  1 a 1 6 ]
-"112
-} 0
-"116 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Motors.h
-[v _Chair_Position Chair_Position `(i  1 e 2 0 ]
-{
-[v Chair_Position@Command Command `*.25uc  1 p 2 5 ]
-"151
-} 0
-"3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strcmp.c
-[v _strcmp strcmp `(i  1 e 2 0 ]
-{
-[v strcmp@l l `*.25Cuc  1 p 2 0 ]
-[v strcmp@r r `*.25Cuc  1 p 2 2 ]
-"7
-} 0
-"98 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Motors.h
-[v _Stop Stop `(v  1 e 1 0 ]
-{
-"101
-} 0
-"82
-[v _Move_left Move_left `(v  1 e 1 0 ]
-{
-"85
-} 0
-"60
-[v _Rightwheel_Stop Rightwheel_Stop `(v  1 e 1 0 ]
-{
-"63
-} 0
-"90
-[v _Move_Right Move_Right `(v  1 e 1 0 ]
-{
-"93
-} 0
-"53
-[v _Leftwheel_Stop Leftwheel_Stop `(v  1 e 1 0 ]
-{
-"56
-} 0
-"67
-[v _Move_Forward Move_Forward `(v  1 e 1 0 ]
-{
-"71
-} 0
-"28
-[v _Rightwheel_Forward Rightwheel_Forward `(v  1 e 1 0 ]
-{
-"33
-} 0
-"20
-[v _Leftwheel_Forward Leftwheel_Forward `(v  1 e 1 0 ]
-{
-"25
-} 0
-"75
-[v _Move_Back Move_Back `(v  1 e 1 0 ]
-{
-"78
-} 0
-"45
-[v _Rightwheel_Back Rightwheel_Back `(v  1 e 1 0 ]
-{
-"50
-} 0
-"37
-[v _Leftwheel_Back Leftwheel_Back `(v  1 e 1 0 ]
-{
-"41
 } 0

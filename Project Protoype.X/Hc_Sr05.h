@@ -15,15 +15,16 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-     float Time, Distance;
+     float Time=0, Distance=0;
      
 //---------------------------------------------------------------------------------------------------------
 // Name Get Distance
 
 
      
-     float Get_Distance(void){
-             
+     float Get_Distance_Front(void){
+        Distance=0;    
+        Time=0;
         FRONT_TRIG_SetHigh();
        __delay_us(10);
      
@@ -35,6 +36,38 @@ extern "C" {
         
        TMR1_StartTimer();
        while(FRONT_ECHO_GetValue()==1)
+           ;
+       Time = TMR1_ReadTimer();
+       TMR1_StopTimer();
+     
+       TMR1_WriteTimer(ZERO);
+       Distance = Time/58.82;
+       Distance += 1;
+      
+     
+       return Distance;
+
+    }
+     
+     
+     
+     
+     
+     
+     float Get_Distance_Rear(void){
+        Distance=0;    
+        Time=0;   
+        REAR_TRIG_SetHigh();
+       __delay_us(10);
+     
+      
+       REAR_TRIG_SetLow();
+       
+       while(REAR_ECHO_GetValue()==0)
+           ;
+        
+       TMR1_StartTimer();
+       while(REAR_ECHO_GetValue()==1)
            ;
        Time = TMR1_ReadTimer();
        TMR1_StopTimer();
