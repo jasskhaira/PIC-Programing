@@ -32,9 +32,15 @@ void main(void)
     __delay_ms(10);
     esp8266_start("TCP","api.thingspeak.com","80");
     __delay_ms(10);
-    esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=88.9990");
-    __delay_ms(10);
+   */
     
+    
+      /* esp8266_send("Kajal,KajalKajal");
+      esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=88.9990");
+       esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=88.9990");
+   esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=88.9990");
+    __delay_ms(10);
+    */
     //BUZZER_SetHigh();
      //__delay_ms(500);  
     /*Esp_data("AT\r\n") ;
@@ -56,6 +62,7 @@ void main(void)
          __delay_ms(900);
         //Esp_data("AT+CWMODE=""KAJAL"",""\r\n");   
        */
+        
         if(EUSART1_is_rx_ready()){
             Direction= EUSART1_Read();
         
@@ -106,50 +113,20 @@ void main(void)
          while(Get_Distance_Front()<=12)
          {
           Chair_Position("STOP");
-           BUZZER_SetHigh();
-           __delay_us(10);
+           BUZZER_SetHigh();                    // Buzzer ON
+           __delay_us(200);
          }
         
          while(Get_Distance_Rear()<=12)
          {
           Chair_Position("STOP");
-           BUZZER_SetHigh();
-           __delay_us(10);
+           BUZZER_SetHigh();                    // Buzzer ON
+           __delay_us(200);
          }
+        
          //BUZZER_SetHigh();
-          __delay_ms(500);
-          BUZZER_SetLow();
-         
+          //__delay_ms(900);
+          BUZZER_SetLow();                      // Buzzer OF
+         // __delay_ms(900);
     }
 }
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();

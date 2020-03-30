@@ -180,6 +180,20 @@
 #define REAR_TRIG_SetAnalogMode()      do { ANSELBbits.ANSB1 = 1; } while(0)
 #define REAR_TRIG_SetDigitalMode()     do { ANSELBbits.ANSB1 = 0; } while(0)
 
+// get/set BUZZER aliases
+#define BUZZER_TRIS                 TRISCbits.TRISC2
+#define BUZZER_LAT                  LATCbits.LATC2
+#define BUZZER_PORT                 PORTCbits.RC2
+#define BUZZER_ANS                  ANSELCbits.ANSC2
+#define BUZZER_SetHigh()            do { LATCbits.LATC2 = 1; } while(0)
+#define BUZZER_SetLow()             do { LATCbits.LATC2 = 0; } while(0)
+#define BUZZER_Toggle()             do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0)
+#define BUZZER_GetValue()           PORTCbits.RC2
+#define BUZZER_SetDigitalInput()    do { TRISCbits.TRISC2 = 1; } while(0)
+#define BUZZER_SetDigitalOutput()   do { TRISCbits.TRISC2 = 0; } while(0)
+#define BUZZER_SetAnalogMode()      do { ANSELCbits.ANSC2 = 1; } while(0)
+#define BUZZER_SetDigitalMode()     do { ANSELCbits.ANSC2 = 0; } while(0)
+
 // get/set RC6 procedures
 #define RC6_SetHigh()            do { LATCbits.LATC6 = 1; } while(0)
 #define RC6_SetLow()             do { LATCbits.LATC6 = 0; } while(0)
@@ -227,20 +241,6 @@
 #define FRONT_ECHO_SetDigitalOutput()   do { TRISDbits.TRISD1 = 0; } while(0)
 #define FRONT_ECHO_SetAnalogMode()      do { ANSELDbits.ANSD1 = 1; } while(0)
 #define FRONT_ECHO_SetDigitalMode()     do { ANSELDbits.ANSD1 = 0; } while(0)
-
-// get/set BUZZER aliases
-#define BUZZER_TRIS                 TRISDbits.TRISD2
-#define BUZZER_LAT                  LATDbits.LATD2
-#define BUZZER_PORT                 PORTDbits.RD2
-#define BUZZER_ANS                  ANSELDbits.ANSD2
-#define BUZZER_SetHigh()            do { LATDbits.LATD2 = 1; } while(0)
-#define BUZZER_SetLow()             do { LATDbits.LATD2 = 0; } while(0)
-#define BUZZER_Toggle()             do { LATDbits.LATD2 = ~LATDbits.LATD2; } while(0)
-#define BUZZER_GetValue()           PORTDbits.RD2
-#define BUZZER_SetDigitalInput()    do { TRISDbits.TRISD2 = 1; } while(0)
-#define BUZZER_SetDigitalOutput()   do { TRISDbits.TRISD2 = 0; } while(0)
-#define BUZZER_SetAnalogMode()      do { ANSELDbits.ANSD2 = 1; } while(0)
-#define BUZZER_SetDigitalMode()     do { ANSELDbits.ANSD2 = 0; } while(0)
 
 // get/set RD6 procedures
 #define RD6_SetHigh()            do { LATDbits.LATD6 = 1; } while(0)

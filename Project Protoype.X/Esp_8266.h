@@ -32,7 +32,8 @@
 #define ESP8266_NOCHANGE 4
 #define ESP8266_LINKED 5
 #define ESP8266_UNLINK 6    
-    
+ 
+/*
 inline unsigned char _esp8266_waitResponse(void) {
     unsigned char so_far[6] = {0,0,0,0,0,0};
     unsigned const char lengths[6] = {2,5,4,9,6,6};
@@ -42,7 +43,7 @@ inline unsigned char _esp8266_waitResponse(void) {
     unsigned char response;
     bool continue_loop = true;
     while (continue_loop) {
-        received = EUSART1_Read();
+        received = EUSART2_Read();
         for (unsigned char i = 0; i < 6; i++) {
             if (strings[i][so_far[i]] == received) {
                 so_far[i]++;
@@ -58,13 +59,13 @@ inline unsigned char _esp8266_waitResponse(void) {
     return response;
 }
 
-    
+  */  
     
 void _esp8266_print(unsigned const char *ptr) {
-    while (*ptr != 0) {
-        EUSART1_Write(*ptr++);
+    //while (*ptr != 0) {
+      //  EUSART1_Write(*ptr++);
     }
-}
+
     
 
 inline uint16_t _esp8266_waitFor(unsigned char *string) {
@@ -89,8 +90,8 @@ inline uint16_t _esp8266_waitFor(unsigned char *string) {
 //**Function to convert string to byte**//
 void ESP8266_send_string(char* st_pt)
 {
-    while(*st_pt) //if there is a char
-        EUSART1_Write(*st_pt++); //process it as a byte data
+    //while(*st_pt) //if there is a char
+      //  EUSART1_Write(*st_pt++); //process it as a byte data
 }
 //___________End of function______________//
 
@@ -102,6 +103,7 @@ void ESP8266_send_string(char* st_pt)
  *
  * @return true if the module is started, false if something went wrong
  */
+/*
 bool esp8266_isStarted(void) {
     _esp8266_print("AT\r\n");
     return (_esp8266_waitResponse() == ESP8266_OK);
@@ -114,7 +116,7 @@ bool esp8266_isStarted(void) {
  * response.
  *
  * @return true iff the module restarted properly
- */
+ 
 bool esp8266_restart(void) {
     _esp8266_print("AT+RST\r\n");
     if (_esp8266_waitResponse() != ESP8266_OK) {
@@ -132,7 +134,7 @@ bool esp8266_restart(void) {
  * This sends the ATE command to the ESP module.
  *
  * @param echo whether to enable command echoing or not
- */
+ 
 void esp8266_echoCmds(bool echo) {
     _esp8266_print("ATE");
     if (echo) {
@@ -153,7 +155,7 @@ void esp8266_echoCmds(bool echo) {
  * This sends the AT+CWMODE command to the ESP module.
  *
  * @param mode an ORed bitmask of ESP8266_STATION and ESP8266_SOFTAP
- */
+ 
 void esp8266_mode(unsigned char mode) {
     _esp8266_print("AT+CWMODE=");
     EUSART1_Write(mode + '0');
@@ -169,7 +171,7 @@ void esp8266_mode(unsigned char mode) {
  * @param ssid The SSID to connect to
  * @param pass The password of the network
  * @return an ESP status code, normally either ESP8266_OK or ESP8266_FAIL
- */
+ *
 unsigned char esp8266_connect(unsigned char* ssid, unsigned char* pass) {
     _esp8266_print("AT+CWJAP=\"");
     _esp8266_print(ssid);
@@ -183,7 +185,7 @@ unsigned char esp8266_connect(unsigned char* ssid, unsigned char* pass) {
  * Disconnect from the access point.
  *
  * This sends the AT+CWQAP command to the ESP module.
- */
+ *
 void esp8266_disconnect(void) {
     _esp8266_print("AT+CWQAP\r\n");
     _esp8266_waitFor("OK");
@@ -199,7 +201,7 @@ void esp8266_disconnect(void) {
  *
  * @param store_in a pointer to an array of the type unsigned char[4]; this
  * array will be filled with the local IP.
- */
+ *
 void esp8266_IP(unsigned char* store_in) {
     _esp8266_print("AT+CIFSR\r\n");
     unsigned char received;
@@ -227,7 +229,7 @@ void esp8266_IP(unsigned char* store_in) {
  * @param port The port to connect to
  *
  * @return true iff the connection is opened after this.
- */
+ *
 bool esp8266_start(unsigned char protocol, char* ip, unsigned char port) {
     _esp8266_print("AT+CIPSTART=\"");
     if (protocol == ESP8266_TCP) {
@@ -260,7 +262,7 @@ bool esp8266_start(unsigned char protocol, char* ip, unsigned char port) {
  * @param data The data to send
  *
  * @return true iff the data was sent correctly.
- */
+ *
 bool esp8266_send(unsigned char* data) {
     unsigned char length_str[6] = "\0\0\0\0\0";
     sprintf(length_str, "%u", strlen(data));
@@ -275,7 +277,7 @@ bool esp8266_send(unsigned char* data) {
     return 0;
 }
 
-/**
+
  * Read a string of data that is sent to the ESP8266.
  *
  * This waits for a +IPD line from the module. If more bytes than the maximum
@@ -285,7 +287,7 @@ bool esp8266_send(unsigned char* data) {
  * @param max_length maximum amount of bytes to read in
  * @param discard_headers if set to true, we will skip until the first \r\n\r\n,
  * for HTTP this means skipping the headers.
- */
+ *
 void esp8266_receive(unsigned char* store_in, uint16_t max_length, bool discard_headers) {
     _esp8266_waitFor("+IPD,");
     uint16_t length = 0;
@@ -304,7 +306,7 @@ void esp8266_receive(unsigned char* store_in, uint16_t max_length, bool discard_
     }
 
     /*sprintf(store_in, "%u,%u:%c%c", length, max_length, EUSART1_Read(), EUSART1_Read());
-    return;*/
+    return;*
 
     uint16_t i;
     for (i = 0; i < max_length; i++) {
@@ -317,13 +319,13 @@ void esp8266_receive(unsigned char* store_in, uint16_t max_length, bool discard_
     _esp8266_waitFor("OK");
 }
 
-/**
+/*
  * Output a string to the ESP module.
  *
  * This is a function for internal use only.
  *
  * @param ptr A pointer to the string to send.
- */
+ *
 
 
 /**
@@ -335,7 +337,7 @@ void esp8266_receive(unsigned char* store_in, uint16_t max_length, bool discard_
  * @param string
  *
  * @return the number of characters read
- */
+ *
 
 
 /**
@@ -355,8 +357,8 @@ void esp8266_receive(unsigned char* store_in, uint16_t max_length, bool discard_
  *  * DNS fail (or something like that)
  *
  * @return a constant from esp8266.h describing the status response.
- */
-
+ *
+*/
 
 
 #endif

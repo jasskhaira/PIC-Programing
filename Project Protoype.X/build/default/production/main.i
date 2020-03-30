@@ -10139,39 +10139,12 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 3 "main.c" 2
 
 # 1 "./Esp_8266.h" 1
-# 36 "./Esp_8266.h"
-__attribute__((inline)) unsigned char _esp8266_waitResponse(void) {
-    unsigned char so_far[6] = {0,0,0,0,0,0};
-    unsigned const char lengths[6] = {2,5,4,9,6,6};
-    unsigned const char* strings[6] = {"OK", "ready", "FAIL", "no change", "Linked", "Unlink"};
-    unsigned const char responses[6] = {1, 2, 3, 4, 5, 6};
-    unsigned char received;
-    unsigned char response;
-    _Bool continue_loop = 1;
-    while (continue_loop) {
-        received = EUSART1_Read();
-        for (unsigned char i = 0; i < 6; i++) {
-            if (strings[i][so_far[i]] == received) {
-                so_far[i]++;
-                if (so_far[i] == lengths[i]) {
-                    response = responses[i];
-                    continue_loop = 0;
-                }
-            } else {
-                so_far[i] = 0;
-            }
-        }
-    }
-    return response;
-}
-
-
-
+# 64 "./Esp_8266.h"
 void _esp8266_print(unsigned const char *ptr) {
-    while (*ptr != 0) {
-        EUSART1_Write(*ptr++);
+
+
     }
-}
+
 
 
 __attribute__((inline)) uint16_t _esp8266_waitFor(unsigned char *string) {
@@ -10196,143 +10169,8 @@ __attribute__((inline)) uint16_t _esp8266_waitFor(unsigned char *string) {
 
 void ESP8266_send_string(char* st_pt)
 {
-    while(*st_pt)
-        EUSART1_Write(*st_pt++);
-}
-# 105 "./Esp_8266.h"
-_Bool esp8266_isStarted(void) {
-    _esp8266_print("AT\r\n");
-    return (_esp8266_waitResponse() == 1);
-}
-# 118 "./Esp_8266.h"
-_Bool esp8266_restart(void) {
-    _esp8266_print("AT+RST\r\n");
-    if (_esp8266_waitResponse() != 1) {
-        return 0;
-    }
-    return (_esp8266_waitResponse() == 2);
-}
-# 136 "./Esp_8266.h"
-void esp8266_echoCmds(_Bool echo) {
-    _esp8266_print("ATE");
-    if (echo) {
-        EUSART1_Write('1');
-    } else {
-        EUSART1_Write('0');
-    }
-    _esp8266_print("\r\n");
-    _esp8266_waitFor("OK");
-}
-# 157 "./Esp_8266.h"
-void esp8266_mode(unsigned char mode) {
-    _esp8266_print("AT+CWMODE=");
-    EUSART1_Write(mode + '0');
-    _esp8266_print("\r\n");
-    _esp8266_waitResponse();
-}
-# 173 "./Esp_8266.h"
-unsigned char esp8266_connect(unsigned char* ssid, unsigned char* pass) {
-    _esp8266_print("AT+CWJAP=\"");
-    _esp8266_print(ssid);
-    _esp8266_print("\",\"");
-    _esp8266_print(pass);
-    _esp8266_print("\"\r\n");
-    return _esp8266_waitResponse();
-}
 
 
-
-
-
-
-void esp8266_disconnect(void) {
-    _esp8266_print("AT+CWQAP\r\n");
-    _esp8266_waitFor("OK");
-}
-# 203 "./Esp_8266.h"
-void esp8266_IP(unsigned char* store_in) {
-    _esp8266_print("AT+CIFSR\r\n");
-    unsigned char received;
-    do {
-        received = EUSART1_Read();
-    } while (received < '0' || received > '9');
-    for (unsigned char i = 0; i < 4; i++) {
-        store_in[i] = 0;
-        do {
-            store_in[i] = 10 * store_in[i] + received - '0';
-            received = EUSART1_Read();
-        } while (received >= '0' && received <= '9');
-        received = EUSART1_Read();
-    }
-    _esp8266_waitFor("OK");
-}
-# 231 "./Esp_8266.h"
-_Bool esp8266_start(unsigned char protocol, char* ip, unsigned char port) {
-    _esp8266_print("AT+CIPSTART=\"");
-    if (protocol == 1) {
-        _esp8266_print("TCP");
-    } else {
-        _esp8266_print("UDP");
-    }
-    _esp8266_print("\",\"");
-    _esp8266_print(ip);
-    _esp8266_print("\",");
-    unsigned char port_str[5] = "\0\0\0\0";
-    sprintf(port_str, "%u", port);
-    _esp8266_print(port_str);
-    _esp8266_print("\r\n");
-    if (_esp8266_waitResponse() != 1) {
-        return 0;
-    }
-    if (_esp8266_waitResponse() != 5) {
-        return 0;
-    }
-    return 1;
-}
-# 264 "./Esp_8266.h"
-_Bool esp8266_send(unsigned char* data) {
-    unsigned char length_str[6] = "\0\0\0\0\0";
-    sprintf(length_str, "%u", strlen(data));
-    _esp8266_print("AT+CIPSEND=");
-    _esp8266_print(length_str);
-    _esp8266_print("\r\n");
-    while (EUSART1_Read() != '>');
-    _esp8266_print(data);
-    if (_esp8266_waitResponse() == 1) {
-        return 1;
-    }
-    return 0;
-}
-# 289 "./Esp_8266.h"
-void esp8266_receive(unsigned char* store_in, uint16_t max_length, _Bool discard_headers) {
-    _esp8266_waitFor("+IPD,");
-    uint16_t length = 0;
-    unsigned char received = EUSART1_Read();
-    do {
-        length = length * 10 + received - '0';
-        received = EUSART1_Read();
-    } while (received >= '0' && received <= '9');
-
-    if (discard_headers) {
-        length -= _esp8266_waitFor("\r\n\r\n");
-    }
-
-    if (length < max_length) {
-        max_length = length;
-    }
-
-
-
-
-    uint16_t i;
-    for (i = 0; i < max_length; i++) {
-        store_in[i] = EUSART1_Read();
-    }
-    store_in[i] = 0;
-    for (; i < length; i++) {
-        EUSART1_Read();
-    }
-    _esp8266_waitFor("OK");
 }
 # 4 "main.c" 2
 # 18 "main.c"
@@ -10342,16 +10180,10 @@ void main(void)
     SYSTEM_Initialize();
     char rec[100], Direction;
     float Distance=0, Time=0;
-# 50 "main.c"
+# 56 "main.c"
     while (1)
     {
-
-
-
-
-
-
-
+# 66 "main.c"
         if(EUSART1_is_rx_ready()){
             Direction= EUSART1_Read();
 
@@ -10402,19 +10234,20 @@ void main(void)
          while(Get_Distance_Front()<=12)
          {
           Chair_Position("STOP");
-           do { LATDbits.LATD2 = 1; } while(0);
-           _delay((unsigned long)((10)*(8000000/4000000.0)));
+           do { LATCbits.LATC2 = 1; } while(0);
+           _delay((unsigned long)((200)*(8000000/4000000.0)));
          }
 
          while(Get_Distance_Rear()<=12)
          {
           Chair_Position("STOP");
-           do { LATDbits.LATD2 = 1; } while(0);
-           _delay((unsigned long)((10)*(8000000/4000000.0)));
+           do { LATCbits.LATC2 = 1; } while(0);
+           _delay((unsigned long)((200)*(8000000/4000000.0)));
          }
 
-          _delay((unsigned long)((500)*(8000000/4000.0)));
-          do { LATDbits.LATD2 = 0; } while(0);
+
+
+          do { LATCbits.LATC2 = 0; } while(0);
 
     }
 }
