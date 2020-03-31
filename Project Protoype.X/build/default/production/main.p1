@@ -167,6 +167,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "72 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"207 ./mcc_generated_files/eusart1.h
+[; ;./mcc_generated_files/eusart1.h: 207: _Bool EUSART1_is_rx_ready(void);
+[v _EUSART1_is_rx_ready `(a ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f43k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -2220,83 +2223,204 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Distance -> -> 0 `i `f ]
 [v _Time `f ~T0 @X0 1 a ]
 [e = _Time -> -> 0 `i `f ]
-"27
-[; ;main.c: 27:     esp8266_isStarted();
-[e ( _esp8266_isStarted ..  ]
-"29
-[; ;main.c: 29:     esp8266_mode(1);
-[e ( _esp8266_mode (1 -> -> 1 `i `uc ]
-"30
-[; ;main.c: 30:     _delay((unsigned long)((10)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"31
-[; ;main.c: 31:     esp8266_connect("Kajal","KajalKajal");
-[e ( _esp8266_connect (2 , :s 40C :s 41C ]
-"32
-[; ;main.c: 32:     _delay((unsigned long)((10)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"33
-[; ;main.c: 33:     esp8266_start("TCP","api.thingspeak.com","80");
-[e ( _esp8266_start (3 , , -> :s 42C `uc :s 43C -> :s 44C `uc ]
-"34
-[; ;main.c: 34:     _delay((unsigned long)((10)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"35
-[; ;main.c: 35:     esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=88.9990");
-[e ( _esp8266_send (1 :s 45C ]
-"36
-[; ;main.c: 36:     _delay((unsigned long)((10)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "50
 [; ;main.c: 50:     while (1)
 [e :U 1017 ]
 "51
 [; ;main.c: 51:     {
 {
-"52
-[; ;main.c: 52:         _delay((unsigned long)((900)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"53
-[; ;main.c: 53:         _delay((unsigned long)((900)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"54
-[; ;main.c: 54:              esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=33.9990");
-[e ( _esp8266_send (1 :s 46C ]
-"55
-[; ;main.c: 55:          _delay((unsigned long)((900)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"56
-[; ;main.c: 56:          _delay((unsigned long)((900)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"119
-[; ;main.c: 119:           _delay((unsigned long)((500)*(8000000/4000.0)));
+"59
+[; ;main.c: 59:         if(EUSART1_is_rx_ready()){
+[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 1019  ]
+{
+"60
+[; ;main.c: 60:             Direction= EUSART1_Read();
+[e = _Direction -> ( _EUSART1_Read ..  `uc ]
+"63
+[; ;main.c: 63:         if(Direction=='F')
+[e $ ! == -> _Direction `ui -> 70 `ui 1020  ]
+"64
+[; ;main.c: 64:             {
+{
+"65
+[; ;main.c: 65:                  Chair_Position("FORWARD");
+[e ( _Chair_Position (1 :s 40C ]
+"66
+[; ;main.c: 66:                   _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"69
+[; ;main.c: 69:             }
+}
+[e $U 1021  ]
+"71
+[; ;main.c: 71:             else if(Direction=='B')
+[e :U 1020 ]
+[e $ ! == -> _Direction `ui -> 66 `ui 1022  ]
+"72
+[; ;main.c: 72:             {
+{
+"73
+[; ;main.c: 73:                  Chair_Position("BACK");
+[e ( _Chair_Position (1 :s 41C ]
+"74
+[; ;main.c: 74:                   _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"77
+[; ;main.c: 77:             }
+}
+[e $U 1023  ]
+"80
+[; ;main.c: 80:             else if(Direction=='L'){
+[e :U 1022 ]
+[e $ ! == -> _Direction `ui -> 76 `ui 1024  ]
+{
+"81
+[; ;main.c: 81:                  Chair_Position("LEFT");
+[e ( _Chair_Position (1 :s 42C ]
+"82
+[; ;main.c: 82:                   _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"86
+[; ;main.c: 86:             }
+}
+[e $U 1025  ]
+"87
+[; ;main.c: 87:              else if(Direction=='R'){
+[e :U 1024 ]
+[e $ ! == -> _Direction `ui -> 82 `ui 1026  ]
+{
+"88
+[; ;main.c: 88:                  Chair_Position("RIGHT");
+[e ( _Chair_Position (1 :s 43C ]
+"89
+[; ;main.c: 89:                   _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"93
+[; ;main.c: 93:             }
+}
+[e $U 1027  ]
+"94
+[; ;main.c: 94:              else if(Direction=='S'){
+[e :U 1026 ]
+[e $ ! == -> _Direction `ui -> 83 `ui 1028  ]
+{
+"95
+[; ;main.c: 95:                  Chair_Position("STOP");
+[e ( _Chair_Position (1 :s 44C ]
+"96
+[; ;main.c: 96:                   _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"100
+[; ;main.c: 100:              }}
+}
+[e :U 1028 ]
+[e :U 1027 ]
+[e :U 1025 ]
+[e :U 1023 ]
+[e :U 1021 ]
+}
+[e $U 1029  ]
+"101
+[; ;main.c: 101:              else
+[e :U 1019 ]
+"102
+[; ;main.c: 102:                  Chair_Position("STOP");
+[e ( _Chair_Position (1 :s 45C ]
+[e :U 1029 ]
+"106
+[; ;main.c: 106:          while(Get_Distance_Front()<=12)
+[e $U 1030  ]
+[e :U 1031 ]
+"107
+[; ;main.c: 107:          {
+{
+"108
+[; ;main.c: 108:           Chair_Position("STOP");
+[e ( _Chair_Position (1 :s 46C ]
+"109
+[; ;main.c: 109:            do { LATDbits.LATD2 = 1; } while(0);
+[e :U 1035 ]
+{
+[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 1034 ]
+"110
+[; ;main.c: 110:            _delay((unsigned long)((10)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"111
+[; ;main.c: 111:          }
+}
+[e :U 1030 ]
+"106
+[; ;main.c: 106:          while(Get_Distance_Front()<=12)
+[e $ <= ( _Get_Distance_Front ..  -> -> 12 `i `f 1031  ]
+[e :U 1032 ]
+"113
+[; ;main.c: 113:          while(Get_Distance_Rear()<=12)
+[e $U 1036  ]
+[e :U 1037 ]
+"114
+[; ;main.c: 114:          {
+{
+"115
+[; ;main.c: 115:           Chair_Position("STOP");
+[e ( _Chair_Position (1 :s 47C ]
+"116
+[; ;main.c: 116:            do { LATDbits.LATD2 = 1; } while(0);
+[e :U 1041 ]
+{
+[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 1040 ]
+"117
+[; ;main.c: 117:            _delay((unsigned long)((10)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"118
+[; ;main.c: 118:          }
+}
+[e :U 1036 ]
+"113
+[; ;main.c: 113:          while(Get_Distance_Rear()<=12)
+[e $ <= ( _Get_Distance_Rear ..  -> -> 12 `i `f 1037  ]
+[e :U 1038 ]
+"120
+[; ;main.c: 120:           _delay((unsigned long)((500)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"122
-[; ;main.c: 122:     }
+"121
+[; ;main.c: 121:           do { LATDbits.LATD2 = 0; } while(0);
+[e :U 1044 ]
+{
+[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 1043 ]
+"123
+[; ;main.c: 123:     }
 }
 [e :U 1016 ]
 [e $U 1017  ]
 [e :U 1018 ]
-"128
-[; ;main.c: 128: }
+"124
+[; ;main.c: 124: }
 [e :UE 1015 ]
 }
 [p f _sprintf 8389632 ]
 [a 7C 114 101 97 100 121 0 ]
 [a 31C 37 117 0 ]
 [a 33C 37 117 0 ]
-[a 43C 97 112 105 46 116 104 105 110 103 115 112 101 97 107 46 99 111 109 0 ]
-[a 41C 75 97 106 97 108 75 97 106 97 108 0 ]
-[a 40C 75 97 106 97 108 0 ]
 [a 11C 85 110 108 105 110 107 0 ]
 [a 9C 110 111 32 99 104 97 110 103 101 0 ]
 [a 10C 76 105 110 107 101 100 0 ]
 [a 4C 82 73 71 72 84 0 ]
+[a 43C 82 73 71 72 84 0 ]
 [a 3C 76 69 70 84 0 ]
+[a 42C 76 69 70 84 0 ]
 [a 5C 83 84 79 80 0 ]
+[a 44C 83 84 79 80 0 ]
+[a 45C 83 84 79 80 0 ]
+[a 46C 83 84 79 80 0 ]
+[a 47C 83 84 79 80 0 ]
 [a 28C 85 68 80 0 ]
 [a 27C 84 67 80 0 ]
-[a 42C 84 67 80 0 ]
 [a 8C 70 65 73 76 0 ]
 [a 6C 79 75 0 ]
 [a 16C 79 75 0 ]
@@ -2304,13 +2428,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 25C 79 75 0 ]
 [a 39C 79 75 0 ]
 [a 2C 66 65 67 75 0 ]
+[a 41C 66 65 67 75 0 ]
 [a 14C 65 84 69 0 ]
 [a 1C 70 79 82 87 65 82 68 0 ]
+[a 40C 70 79 82 87 65 82 68 0 ]
 [a 17C 65 84 43 67 87 77 79 68 69 61 0 ]
 [a 34C 65 84 43 67 73 80 83 69 78 68 61 0 ]
-[a 45C 71 69 84 32 47 117 112 100 97 116 101 63 97 112 105 95 107 101 121 61 50 51 49 70 76 54 89 87 85 84 74 76 78 54 66 82 38 102 105 101 108 100 49 61 56 56 46 57 57 57 48 0 ]
-[a 46C 71 69 84 32 47 117 112 100 97 116 101 63 97 112 105 95 107 101 121 61 50 51 49 70 76 54 89 87 85 84 74 76 78 54 66 82 38 102 105 101 108 100 49 61 51 51 46 57 57 57 48 0 ]
-[a 44C 56 48 0 ]
 [a 36C 43 73 80 68 44 0 ]
 [a 30C 34 44 0 ]
 [a 26C 65 84 43 67 73 80 83 84 65 82 84 61 34 0 ]

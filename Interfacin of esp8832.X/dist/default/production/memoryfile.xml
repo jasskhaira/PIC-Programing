@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\Interfacin_of_esp8832.X.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>8192</length>
+      <used>528</used>
+      <free>7664</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>512</length>
+      <used>27</used>
+      <free>485</free>
+    </memory>
+  </executable>
+</project>

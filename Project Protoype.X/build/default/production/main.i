@@ -10342,35 +10342,79 @@ void main(void)
     SYSTEM_Initialize();
     char rec[100], Direction;
     float Distance=0, Time=0;
-
-
-
-    esp8266_isStarted();
-
-    esp8266_mode(1);
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-    esp8266_connect("Kajal","KajalKajal");
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-    esp8266_start("TCP","api.thingspeak.com","80");
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-    esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=88.9990");
-    _delay((unsigned long)((10)*(8000000/4000.0)));
 # 50 "main.c"
     while (1)
     {
-        _delay((unsigned long)((900)*(8000000/4000.0)));
-        _delay((unsigned long)((900)*(8000000/4000.0)));
-             esp8266_send("GET /update?api_key=231FL6YWUTJLN6BR&field1=33.9990");
-         _delay((unsigned long)((900)*(8000000/4000.0)));
-         _delay((unsigned long)((900)*(8000000/4000.0)));
-# 119 "main.c"
-          _delay((unsigned long)((500)*(8000000/4000.0)));
 
+
+
+
+
+
+
+        if(EUSART1_is_rx_ready()){
+            Direction= EUSART1_Read();
+
+
+        if(Direction=='F')
+            {
+                 Chair_Position("FORWARD");
+                  _delay((unsigned long)((100)*(8000000/4000.0)));
+
+
+            }
+
+            else if(Direction=='B')
+            {
+                 Chair_Position("BACK");
+                  _delay((unsigned long)((100)*(8000000/4000.0)));
+
+
+            }
+
+
+            else if(Direction=='L'){
+                 Chair_Position("LEFT");
+                  _delay((unsigned long)((100)*(8000000/4000.0)));
+
+
+
+            }
+             else if(Direction=='R'){
+                 Chair_Position("RIGHT");
+                  _delay((unsigned long)((100)*(8000000/4000.0)));
+
+
+
+            }
+             else if(Direction=='S'){
+                 Chair_Position("STOP");
+                  _delay((unsigned long)((100)*(8000000/4000.0)));
+
+
+
+             }}
+             else
+                 Chair_Position("STOP");
+
+
+
+         while(Get_Distance_Front()<=12)
+         {
+          Chair_Position("STOP");
+           do { LATDbits.LATD2 = 1; } while(0);
+           _delay((unsigned long)((10)*(8000000/4000000.0)));
+         }
+
+         while(Get_Distance_Rear()<=12)
+         {
+          Chair_Position("STOP");
+           do { LATDbits.LATD2 = 1; } while(0);
+           _delay((unsigned long)((10)*(8000000/4000000.0)));
+         }
+
+          _delay((unsigned long)((500)*(8000000/4000.0)));
+          do { LATDbits.LATD2 = 0; } while(0);
 
     }
-
-
-
-
-
 }

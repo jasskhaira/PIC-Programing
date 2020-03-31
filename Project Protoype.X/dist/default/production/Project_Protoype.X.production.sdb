@@ -9,16 +9,10 @@
 [v __esp8266_print _esp8266_print `(v  1 e 1 0 ]
 "70
 [v __esp8266_waitFor _esp8266_waitFor `T(us  1 e 2 0 ]
-"105
-[v _esp8266_isStarted esp8266_isStarted `(a  1 e 1 0 ]
-"157
-[v _esp8266_mode esp8266_mode `(v  1 e 1 0 ]
-"173
-[v _esp8266_connect esp8266_connect `(uc  1 e 1 0 ]
-"231
-[v _esp8266_start esp8266_start `(a  1 e 1 0 ]
-"264
-[v _esp8266_send esp8266_send `(a  1 e 1 0 ]
+"25 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Hc_Sr05.h
+[v _Get_Distance_Front Get_Distance_Front `(f  1 e 4 0 ]
+"57
+[v _Get_Distance_Rear Get_Distance_Rear `(f  1 e 4 0 ]
 "20 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Motors.h
 [v _Leftwheel_Forward Leftwheel_Forward `(v  1 e 1 0 ]
 "28
@@ -41,16 +35,12 @@
 [v _Move_Right Move_Right `(v  1 e 1 0 ]
 "98
 [v _Stop Stop `(v  1 e 1 0 ]
-"72 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
-[v _pad pad `(i  1 s 2 pad ]
-"593
-[v _utoa utoa `(i  1 s 2 utoa ]
-"670
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-"1368
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"116
+[v _Chair_Position Chair_Position `(i  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftadd.c
@@ -61,14 +51,6 @@
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lodiv.c
-[v ___lodiv __lodiv `(uo  1 e 8 0 ]
-"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lomod.c
-[v ___lomod __lomod `(uo  1 e 8 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
 "9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
@@ -95,12 +77,12 @@
 [v _main main `(v  1 e 1 0 ]
 "66 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+"99
+[v _EUSART1_is_rx_ready EUSART1_is_rx_ready `(a  1 e 1 0 ]
 "113
 [v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
 "132
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-"146
-[v _putch putch `(v  1 e 1 0 ]
 "153
 [v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
 "155
@@ -623,14 +605,6 @@
 ]
 [u S379 . 1 `S357 1 . 1 0 `S366 1 . 1 0 `S375 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES379  1 e 1 @4082 ]
-"55 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
-[v _flags flags `i  1 s 2 flags ]
-[v _prec prec `i  1 s 2 prec ]
-[v _width width `i  1 s 2 width ]
-"66
-[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
-"69
-[v _nout nout `i  1 s 2 nout ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
@@ -658,216 +632,16 @@
 "18 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"128
+"22
+[v main@Direction Direction `uc  1 a 1 51 ]
+"124
 } 0
-"231 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Esp_8266.h
-[v _esp8266_start esp8266_start `(a  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
 {
-[v esp8266_start@protocol protocol `uc  1 a 1 wreg ]
-"241
-[v esp8266_start@port_str port_str `[5]uc  1 a 5 13 ]
-"231
-[v esp8266_start@protocol protocol `uc  1 a 1 wreg ]
-[v esp8266_start@ip ip `*.25uc  1 p 2 10 ]
-[v esp8266_start@port port `uc  1 p 1 12 ]
-[v esp8266_start@protocol protocol `uc  1 a 1 18 ]
-"252
-} 0
-"264
-[v _esp8266_send esp8266_send `(a  1 e 1 0 ]
-{
-"265
-[v esp8266_send@length_str length_str `[6]uc  1 a 6 10 ]
-"264
-[v esp8266_send@data data `*.25uc  1 p 2 93 ]
-"276
-} 0
-"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
-{
-[s S1911 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-"13
-[v sprintf@f f `S1911  1 a 6 4 ]
-"12
-[v sprintf@ap ap `[1]*.39v  1 a 2 2 ]
-"9
-[v sprintf@s s `*.39uc  1 p 2 87 ]
-[v sprintf@fmt fmt `*.25Cuc  1 p 2 89 ]
-"23
-} 0
-"1368 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-{
-"1371
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 85 ]
-[s S1416 _IO_FILE 0 ]
-"1368
-[v vfprintf@fp fp `*.39S1416  1 p 2 79 ]
-[v vfprintf@fmt fmt `*.25Cuc  1 p 2 81 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 83 ]
-"1382
-} 0
-"670
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-{
-"675
-[v vfpfcnvrt@llu llu `uo  1 a 8 71 ]
-[s S1416 _IO_FILE 0 ]
-"670
-[v vfpfcnvrt@fp fp `*.39S1416  1 p 2 61 ]
-[v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 63 ]
-[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 65 ]
-"1365
-} 0
-"593
-[v _utoa utoa `(i  1 s 2 utoa ]
-{
-"596
-[v utoa@n n `uo  1 a 8 51 ]
-"595
-[v utoa@i i `i  1 a 2 59 ]
-[v utoa@w w `i  1 a 2 49 ]
-[v utoa@p p `i  1 a 2 47 ]
-[s S1416 _IO_FILE 0 ]
-"593
-[v utoa@fp fp `*.39S1416  1 p 2 29 ]
-[v utoa@d d `uo  1 p 8 31 ]
-"619
-} 0
-"72
-[v _pad pad `(i  1 s 2 pad ]
-{
-"74
-[v pad@w w `i  1 a 2 27 ]
-[v pad@i i `i  1 a 2 25 ]
-[s S1416 _IO_FILE 0 ]
-"72
-[v pad@fp fp `*.39S1416  1 p 2 18 ]
-[v pad@buf buf `*.39uc  1 p 2 20 ]
-[v pad@p p `i  1 p 2 22 ]
-"95
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-"7
-[v strlen@a a `*.35Cuc  1 a 2 2 ]
-"5
-[v strlen@s s `*.35Cuc  1 p 2 0 ]
-"12
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-{
-"11
-[v fputs@i i `i  1 a 2 16 ]
-"10
-[v fputs@c c `uc  1 a 1 15 ]
-"8
-[v fputs@s s `*.39Cuc  1 p 2 11 ]
-[s S1911 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S1911  1 p 2 13 ]
+[v ___flge@ff1 ff1 `d  1 p 4 29 ]
+[v ___flge@ff2 ff2 `d  1 p 4 33 ]
 "19
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-{
-[v fputc@c c `i  1 p 2 2 ]
-[s S1911 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S1911  1 p 2 4 ]
-"21
-} 0
-"146 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
-[v _putch putch `(v  1 e 1 0 ]
-{
-[v putch@txData txData `uc  1 a 1 wreg ]
-[v putch@txData txData `uc  1 a 1 wreg ]
-"148
-[v putch@txData txData `uc  1 a 1 1 ]
-"149
-} 0
-"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lomod.c
-[v ___lomod __lomod `(uo  1 e 8 0 ]
-{
-"12
-[v ___lomod@counter counter `uc  1 a 1 16 ]
-"9
-[v ___lomod@dividend dividend `uo  1 p 8 0 ]
-[v ___lomod@divisor divisor `uo  1 p 8 8 ]
-"27
-} 0
-"9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lodiv.c
-[v ___lodiv __lodiv `(uo  1 e 8 0 ]
-{
-"12
-[v ___lodiv@quotient quotient `uo  1 a 8 16 ]
-"13
-[v ___lodiv@counter counter `uc  1 a 1 24 ]
-"9
-[v ___lodiv@dividend dividend `uo  1 p 8 0 ]
-[v ___lodiv@divisor divisor `uo  1 p 8 8 ]
-"32
-} 0
-"157 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Esp_8266.h
-[v _esp8266_mode esp8266_mode `(v  1 e 1 0 ]
-{
-[v esp8266_mode@mode mode `uc  1 a 1 wreg ]
-[v esp8266_mode@mode mode `uc  1 a 1 wreg ]
-[v esp8266_mode@mode mode `uc  1 a 1 25 ]
-"162
-} 0
-"105
-[v _esp8266_isStarted esp8266_isStarted `(a  1 e 1 0 ]
-{
-"108
-} 0
-"173
-[v _esp8266_connect esp8266_connect `(uc  1 e 1 0 ]
-{
-[v esp8266_connect@ssid ssid `*.25uc  1 p 2 25 ]
-[v esp8266_connect@pass pass `*.25uc  1 p 2 27 ]
-"180
-} 0
-"36
-[v __esp8266_waitResponse _esp8266_waitResponse `T(uc  1 e 1 0 ]
-{
-"46
-[v __esp8266_waitResponse@i i `uc  1 a 1 24 ]
-"39
-[v __esp8266_waitResponse@strings strings `[6]*.25Cuc  1 a 12 3 ]
-"37
-[v __esp8266_waitResponse@so_far so_far `[6]uc  1 a 6 15 ]
-"43
-[v __esp8266_waitResponse@continue_loop continue_loop `a  1 a 1 23 ]
-"42
-[v __esp8266_waitResponse@response response `uc  1 a 1 22 ]
-"41
-[v __esp8266_waitResponse@received received `uc  1 a 1 21 ]
-"38
-[v __esp8266_waitResponse@lengths lengths `C[6]uc  1 s 6 lengths ]
-[v __esp8266_waitResponse@F6573 F6573 `[6]*.25Cuc  1 s 12 F6573 ]
-"40
-[v __esp8266_waitResponse@responses responses `C[6]uc  1 s 6 responses ]
-"59
-} 0
-"113 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
-{
-"130
-} 0
-"63 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Esp_8266.h
-[v __esp8266_print _esp8266_print `(v  1 e 1 0 ]
-{
-[v __esp8266_print@ptr ptr `*.35Cuc  1 p 2 1 ]
-"67
-} 0
-"132 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-{
-[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `uc  1 a 1 0 ]
-"139
 } 0
 "50 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -934,4 +708,170 @@
 {
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "176
+} 0
+"57 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Hc_Sr05.h
+[v _Get_Distance_Rear Get_Distance_Rear `(f  1 e 4 0 ]
+{
+"82
+} 0
+"25
+[v _Get_Distance_Front Get_Distance_Front `(f  1 e 4 0 ]
+{
+"50
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 18 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 17 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 8 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 16 ]
+"44
+} 0
+"11 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 19 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 12 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 17 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 24 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 23 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 16 ]
+"11
+[v ___fldiv@b b `d  1 p 4 0 ]
+[v ___fldiv@a a `d  1 p 4 4 ]
+"185
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 15 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 14 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 13 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 12 ]
+"10
+[v ___fladd@b b `d  1 p 4 0 ]
+[v ___fladd@a a `d  1 p 4 4 ]
+"237
+} 0
+"114 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/tmr1.c
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"134
+} 0
+"92
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+{
+"96
+} 0
+"86
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+{
+"90
+} 0
+"98
+[v _TMR1_ReadTimer TMR1_ReadTimer `(us  1 e 2 0 ]
+{
+"100
+[v TMR1_ReadTimer@readVal readVal `us  1 a 2 4 ]
+"102
+[v TMR1_ReadTimer@readValLow readValLow `uc  1 a 1 7 ]
+"101
+[v TMR1_ReadTimer@readValHigh readValHigh `uc  1 a 1 6 ]
+"112
+} 0
+"99 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
+[v _EUSART1_is_rx_ready EUSART1_is_rx_ready `(a  1 e 1 0 ]
+{
+"102
+} 0
+"113
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+{
+"130
+} 0
+"116 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Motors.h
+[v _Chair_Position Chair_Position `(i  1 e 2 0 ]
+{
+[v Chair_Position@Command Command `*.25uc  1 p 2 5 ]
+"151
+} 0
+"3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strcmp.c
+[v _strcmp strcmp `(i  1 e 2 0 ]
+{
+[v strcmp@l l `*.25Cuc  1 p 2 0 ]
+[v strcmp@r r `*.25Cuc  1 p 2 2 ]
+"7
+} 0
+"98 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Motors.h
+[v _Stop Stop `(v  1 e 1 0 ]
+{
+"101
+} 0
+"82
+[v _Move_left Move_left `(v  1 e 1 0 ]
+{
+"85
+} 0
+"60
+[v _Rightwheel_Stop Rightwheel_Stop `(v  1 e 1 0 ]
+{
+"63
+} 0
+"90
+[v _Move_Right Move_Right `(v  1 e 1 0 ]
+{
+"93
+} 0
+"53
+[v _Leftwheel_Stop Leftwheel_Stop `(v  1 e 1 0 ]
+{
+"56
+} 0
+"67
+[v _Move_Forward Move_Forward `(v  1 e 1 0 ]
+{
+"71
+} 0
+"28
+[v _Rightwheel_Forward Rightwheel_Forward `(v  1 e 1 0 ]
+{
+"33
+} 0
+"20
+[v _Leftwheel_Forward Leftwheel_Forward `(v  1 e 1 0 ]
+{
+"25
+} 0
+"75
+[v _Move_Back Move_Back `(v  1 e 1 0 ]
+{
+"78
+} 0
+"45
+[v _Rightwheel_Back Rightwheel_Back `(v  1 e 1 0 ]
+{
+"50
+} 0
+"37
+[v _Leftwheel_Back Leftwheel_Back `(v  1 e 1 0 ]
+{
+"41
 } 0
