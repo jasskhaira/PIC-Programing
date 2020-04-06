@@ -2,26 +2,25 @@
 #include"Motors.h"
 #include "Hc_Sr05.h"
 #include"Esp_8266.h"
-
-
-
+#include"LCD.h"
 
 
 /*
                          Main application
  */
-   
-
-
-
- 
+  
 void main(void)
 {
     // Initialize the device
     SYSTEM_Initialize();
     char rec[100], Direction; 
     float  Distance=0, Time=0;
-   // __delay_ms(900);
+    Lcd_Start();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Print_String("Group 7 Project");
+    Lcd_Set_Cursor(2,2);
+    Lcd_Print_String("7 April 2020");
+    // __delay_ms(900);
    // __delay_ms(900);
     
   /*  esp8266_isStarted();
@@ -52,7 +51,7 @@ void main(void)
     Esp_data("AT+CIPSTART=0,\"TCP\",\"api.thingspeak.com\",""80");
     */
     
-    
+    //Chair_Position("FORWARD");
     while (1)
     {
    /*     __delay_ms(900);
@@ -61,7 +60,8 @@ void main(void)
          __delay_ms(900);
          __delay_ms(900);
         //Esp_data("AT+CWMODE=""KAJAL"",""\r\n");   
-       */
+       
+        */
         
         if(EUSART1_is_rx_ready()){
             Direction= EUSART1_Read();
@@ -107,6 +107,8 @@ void main(void)
              }}
              else
                  Chair_Position("STOP");
+       // __delay_ms(900);
+       // Chair_Position("FORWARD");
             
          
          

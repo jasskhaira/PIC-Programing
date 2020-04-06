@@ -7,6 +7,18 @@
 [v _Get_Distance_Front Get_Distance_Front `(f  1 e 4 0 ]
 "57
 [v _Get_Distance_Rear Get_Distance_Rear `(f  1 e 4 0 ]
+"16 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/LCD.h
+[v _Lcd_SetBit Lcd_SetBit `(v  1 e 1 0 ]
+"39
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"55
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"75
+[v _Lcd_Start Lcd_Start `(v  1 e 1 0 ]
+"93
+[v _Lcd_Print_Char Lcd_Print_Char `(v  1 e 1 0 ]
+"109
+[v _Lcd_Print_String Lcd_Print_String `(v  1 e 1 0 ]
 "20 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Motors.h
 [v _Leftwheel_Forward Leftwheel_Forward `(v  1 e 1 0 ]
 "28
@@ -61,7 +73,7 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"18 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
+"12 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "66 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
@@ -356,7 +368,7 @@
 [v _LATBbits LATBbits `VES1069  1 e 1 @3978 ]
 "7784
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
-[s S1214 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1212 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -366,7 +378,7 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "7811
-[s S1223 . 1 `uc 1 LC0 1 0 :1:0 
+[s S1221 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -375,8 +387,8 @@
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S1232 . 1 `S1214 1 . 1 0 `S1223 1 . 1 0 ]
-[v _LATCbits LATCbits `VES1232  1 e 1 @3979 ]
+[u S1230 . 1 `S1212 1 . 1 0 `S1221 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1230  1 e 1 @3979 ]
 "7896
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 [s S894 . 1 `uc 1 LATD0 1 0 :1:0 
@@ -638,12 +650,12 @@
 [v _EUSART2_ErrorHandler EUSART2_ErrorHandler `*.37(v  1 e 2 0 ]
 "57 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
-"18 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
+"12 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"22
+"16
 [v main@Direction Direction `uc  1 a 1 51 ]
-"132
+"134
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
@@ -717,6 +729,70 @@
 {
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "176
+} 0
+"75 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/LCD.h
+[v _Lcd_Start Lcd_Start `(v  1 e 1 0 ]
+{
+"91
+} 0
+"55
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"57
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 7 ]
+[v Lcd_Set_Cursor@y y `uc  1 a 1 6 ]
+[v Lcd_Set_Cursor@z z `uc  1 a 1 5 ]
+"55
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 3 ]
+"58
+[v Lcd_Set_Cursor@a a `uc  1 a 1 4 ]
+"74
+} 0
+"39
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+"41
+[v Lcd_Cmd@a a `uc  1 a 1 2 ]
+"46
+} 0
+"109
+[v _Lcd_Print_String Lcd_Print_String `(v  1 e 1 0 ]
+{
+"111
+[v Lcd_Print_String@i i `i  1 a 2 12 ]
+"109
+[v Lcd_Print_String@a a `*.25uc  1 p 2 8 ]
+"114
+} 0
+"93
+[v _Lcd_Print_Char Lcd_Print_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Print_Char@data data `uc  1 a 1 wreg ]
+"105
+[v Lcd_Print_Char@i_1375 i `i  1 a 2 5 ]
+"101
+[v Lcd_Print_Char@i i `i  1 a 2 3 ]
+"95
+[v Lcd_Print_Char@Upper_Nibble Upper_Nibble `uc  1 a 1 2 ]
+[v Lcd_Print_Char@Lower_Nibble Lower_Nibble `uc  1 a 1 1 ]
+"93
+[v Lcd_Print_Char@data data `uc  1 a 1 wreg ]
+"96
+[v Lcd_Print_Char@data data `uc  1 a 1 7 ]
+"107
+} 0
+"16
+[v _Lcd_SetBit Lcd_SetBit `(v  1 e 1 0 ]
+{
+[v Lcd_SetBit@data_bit data_bit `uc  1 a 1 wreg ]
+[v Lcd_SetBit@data_bit data_bit `uc  1 a 1 wreg ]
+"18
+[v Lcd_SetBit@data_bit data_bit `uc  1 a 1 0 ]
+"37
 } 0
 "57 C:\Users\Jass khaira\Documents\GitHub\PIC-Programing\Project Protoype.X/Hc_Sr05.h
 [v _Get_Distance_Rear Get_Distance_Rear `(f  1 e 4 0 ]

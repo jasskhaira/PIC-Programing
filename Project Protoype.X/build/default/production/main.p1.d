@@ -8,4 +8,5 @@ mcc_generated_files/eusart1.h  \
 mcc_generated_files/eusart2.h  \
 Motors.h  \
 Hc_Sr05.h  \
-Esp_8266.h 
+Esp_8266.h  \
+LCD.h 

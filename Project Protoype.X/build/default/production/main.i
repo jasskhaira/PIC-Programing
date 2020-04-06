@@ -9528,9 +9528,9 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 289 "./mcc_generated_files/pin_manager.h"
+# 361 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 301 "./mcc_generated_files/pin_manager.h"
+# 373 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -10173,14 +10173,128 @@ void ESP8266_send_string(char* st_pt)
 
 }
 # 4 "main.c" 2
-# 18 "main.c"
+
+# 1 "./LCD.h" 1
+# 16 "./LCD.h"
+void Lcd_SetBit(char data_bit)
+{
+    if(data_bit& 1)
+        do { LATAbits.LATA7 = 1; } while(0);
+    else
+        do { LATAbits.LATA7 = 0; } while(0);
+
+    if(data_bit& 2)
+        do { LATAbits.LATA6 = 1; } while(0);
+    else
+        do { LATAbits.LATA6 = 0; } while(0);
+
+    if(data_bit& 4)
+        do { LATCbits.LATC0 = 1; } while(0);
+    else
+        do { LATCbits.LATC0 = 0; } while(0);
+
+    if(data_bit& 8)
+        do { LATCbits.LATC1 = 1; } while(0);
+    else
+        do { LATCbits.LATC1 = 0; } while(0);
+}
+
+void Lcd_Cmd(char a)
+{
+    do { LATDbits.LATD3 = 0; } while(0);
+    Lcd_SetBit(a);
+    do { LATCbits.LATC4 = 1; } while(0);
+        _delay((unsigned long)((4)*(8000000/4000.0)));
+        do { LATCbits.LATC4 = 0; } while(0);
+}
+
+
+Lcd_Clear()
+{
+    Lcd_Cmd(0);
+    Lcd_Cmd(1);
+}
+
+void Lcd_Set_Cursor(char a, char b)
+{
+    char temp,z,y;
+    if(a== 1)
+    {
+      temp = 0x80 + b - 1;
+        z = temp>>4;
+        y = temp & 0x0F;
+        Lcd_Cmd(z);
+        Lcd_Cmd(y);
+    }
+    else if(a== 2)
+    {
+        temp = 0xC0 + b - 1;
+        z = temp>>4;
+        y = temp & 0x0F;
+        Lcd_Cmd(z);
+        Lcd_Cmd(y);
+    }
+}
+void Lcd_Start()
+{
+  Lcd_SetBit(0x00);
+  for(int i=1065244; i<=0; i--) __nop();
+  Lcd_Cmd(0x03);
+    _delay((unsigned long)((5)*(8000000/4000.0)));
+  Lcd_Cmd(0x03);
+    _delay((unsigned long)((11)*(8000000/4000.0)));
+  Lcd_Cmd(0x03);
+  Lcd_Cmd(0x02);
+  Lcd_Cmd(0x02);
+  Lcd_Cmd(0x08);
+  Lcd_Cmd(0x00);
+  Lcd_Cmd(0x0C);
+  Lcd_Cmd(0x00);
+  Lcd_Cmd(0x06);
+}
+
+void Lcd_Print_Char(char data)
+{
+   char Lower_Nibble,Upper_Nibble;
+   Lower_Nibble = data&0x0F;
+   Upper_Nibble = data&0xF0;
+   do { LATDbits.LATD3 = 1; } while(0);
+   Lcd_SetBit(Upper_Nibble>>4);
+   do { LATCbits.LATC4 = 1; } while(0);
+   for(int i=2130483; i<=0; i--) __nop();
+   do { LATCbits.LATC4 = 0; } while(0);
+   Lcd_SetBit(Lower_Nibble);
+   do { LATCbits.LATC4 = 1; } while(0);
+   for(int i=2130483; i<=0; i--) __nop();
+    do { LATCbits.LATC4 = 0; } while(0);
+}
+
+void Lcd_Print_String(char *a)
+{
+    int i;
+    for(i=0;a[i]!='\0';i++)
+       Lcd_Print_Char(a[i]);
+}
+# 5 "main.c" 2
+
+
+
+
+
+
+
 void main(void)
 {
 
     SYSTEM_Initialize();
     char rec[100], Direction;
     float Distance=0, Time=0;
-# 56 "main.c"
+    Lcd_Start();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Print_String("Group 7 Project");
+    Lcd_Set_Cursor(2,2);
+    Lcd_Print_String("7 April 2020");
+# 55 "main.c"
     while (1)
     {
 # 66 "main.c"
@@ -10228,6 +10342,8 @@ void main(void)
              }}
              else
                  Chair_Position("STOP");
+
+
 
 
 
