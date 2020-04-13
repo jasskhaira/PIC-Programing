@@ -10293,7 +10293,7 @@ void main(void)
     Lcd_Set_Cursor(1,1);
     Lcd_Print_String("Group 7 Project");
     Lcd_Set_Cursor(2,2);
-    Lcd_Print_String("7 April 2020");
+    Lcd_Print_String("16 April 2020");
 # 55 "main.c"
     while (1)
     {
