@@ -2141,20 +2141,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 119:            _delay((unsigned long)((6000)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 6000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "120
-[; ;main.c: 120:            Chair_Position("BACK");
-[e ( _Chair_Position (1 :s 15C ]
+[; ;main.c: 120:            do { LATCbits.LATC2 = 0; } while(0);
+[e :U 1056 ]
+{
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 1055 ]
 "121
-[; ;main.c: 121:            _delay((unsigned long)((500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 121:            Chair_Position("BACK");
+[e ( _Chair_Position (1 :s 15C ]
 "122
-[; ;main.c: 122:            Chair_Position("STOP");
-[e ( _Chair_Position (1 :s 16C ]
+[; ;main.c: 122:            _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "123
-[; ;main.c: 123:            Direction= EUSART1_Read();
-[e = _Direction -> ( _EUSART1_Read ..  `uc ]
+[; ;main.c: 123:            Chair_Position("STOP");
+[e ( _Chair_Position (1 :s 16C ]
 "124
-[; ;main.c: 124:            Direction='n';
-[e = _Direction -> -> 110 `ui `uc ]
+[; ;main.c: 124:             if(EUSART1_is_rx_ready()){
+[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 1057  ]
+{
 "125
 [; ;main.c: 125:            Direction= EUSART1_Read();
 [e = _Direction -> ( _EUSART1_Read ..  `uc ]
@@ -2162,68 +2167,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 126:            Direction='n';
 [e = _Direction -> -> 110 `ui `uc ]
 "127
-[; ;main.c: 127:          }
+[; ;main.c: 127:             if(EUSART1_is_rx_ready()){
+[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 1058  ]
+{
+"128
+[; ;main.c: 128:            Direction= EUSART1_Read();
+[e = _Direction -> ( _EUSART1_Read ..  `uc ]
+"129
+[; ;main.c: 129:            Direction='n';}}
+[e = _Direction -> -> 110 `ui `uc ]
+}
+[e :U 1058 ]
+}
+[e :U 1057 ]
+"130
+[; ;main.c: 130:          }
 }
 [e :U 1050 ]
-"129
-[; ;main.c: 129:          if(Get_Distance_Rear()<=18)
-[e $ ! <= ( _Get_Distance_Rear ..  -> -> 18 `i `f 1054  ]
-"130
-[; ;main.c: 130:          {
-{
-"131
-[; ;main.c: 131:           Chair_Position("STOP");
-[e ( _Chair_Position (1 :s 17C ]
 "132
-[; ;main.c: 132:            do { LATCbits.LATC2 = 1; } while(0);
-[e :U 1057 ]
+[; ;main.c: 132:          if(Get_Distance_Rear()<=18)
+[e $ ! <= ( _Get_Distance_Rear ..  -> -> 18 `i `f 1059  ]
+"133
+[; ;main.c: 133:          {
+{
+"134
+[; ;main.c: 134:           Chair_Position("STOP");
+[e ( _Chair_Position (1 :s 17C ]
+"135
+[; ;main.c: 135:            do { LATCbits.LATC2 = 1; } while(0);
+[e :U 1062 ]
 {
 [e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 1056 ]
-"133
-[; ;main.c: 133:            _delay((unsigned long)((6000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 6000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"134
-[; ;main.c: 134:            Chair_Position("FORWARD");
-[e ( _Chair_Position (1 :s 18C ]
-"135
-[; ;main.c: 135:            _delay((unsigned long)((500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e :U 1061 ]
 "136
-[; ;main.c: 136:            Chair_Position("STOP");
-[e ( _Chair_Position (1 :s 19C ]
+[; ;main.c: 136:            _delay((unsigned long)((6000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 6000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "137
-[; ;main.c: 137:            Direction= EUSART1_Read();
-[e = _Direction -> ( _EUSART1_Read ..  `uc ]
-"138
-[; ;main.c: 138:            Direction='n';
-[e = _Direction -> -> 110 `ui `uc ]
-"139
-[; ;main.c: 139:            Direction= EUSART1_Read();
-[e = _Direction -> ( _EUSART1_Read ..  `uc ]
-"140
-[; ;main.c: 140:            Direction='n';
-[e = _Direction -> -> 110 `ui `uc ]
-"141
-[; ;main.c: 141:          }
-}
-[e :U 1054 ]
-"145
-[; ;main.c: 145:           do { LATCbits.LATC2 = 0; } while(0);
-[e :U 1060 ]
+[; ;main.c: 137:            do { LATCbits.LATC2 = 0; } while(0);
+[e :U 1065 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
+[e :U 1064 ]
+"138
+[; ;main.c: 138:            Chair_Position("FORWARD");
+[e ( _Chair_Position (1 :s 18C ]
+"139
+[; ;main.c: 139:            _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"140
+[; ;main.c: 140:            Chair_Position("STOP");
+[e ( _Chair_Position (1 :s 19C ]
+"141
+[; ;main.c: 141:             if(EUSART1_is_rx_ready()){
+[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 1066  ]
+{
+"142
+[; ;main.c: 142:            Direction= EUSART1_Read();
+[e = _Direction -> ( _EUSART1_Read ..  `uc ]
+"143
+[; ;main.c: 143:            Direction='n';
+[e = _Direction -> -> 110 `ui `uc ]
+"144
+[; ;main.c: 144:             if(EUSART1_is_rx_ready()){
+[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 1067  ]
+{
+"145
+[; ;main.c: 145:            Direction= EUSART1_Read();
+[e = _Direction -> ( _EUSART1_Read ..  `uc ]
+"146
+[; ;main.c: 146:            Direction='n';}}
+[e = _Direction -> -> 110 `ui `uc ]
+}
+[e :U 1067 ]
+}
+[e :U 1066 ]
+"148
+[; ;main.c: 148:          }
+}
 [e :U 1059 ]
-"147
-[; ;main.c: 147:     }
+"154
+[; ;main.c: 154:     }
 }
 [e :U 1036 ]
 [e $U 1037  ]
 [e :U 1038 ]
-"148
-[; ;main.c: 148: }
+"155
+[; ;main.c: 155: }
 [e :UE 1035 ]
 }
 [a 6C 71 114 111 117 112 32 55 32 80 114 111 106 101 99 116 0 ]

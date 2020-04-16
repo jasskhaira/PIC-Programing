@@ -10352,13 +10352,16 @@ void main(void)
           Chair_Position("STOP");
            do { LATCbits.LATC2 = 1; } while(0);
            _delay((unsigned long)((6000)*(8000000/4000.0)));
+           do { LATCbits.LATC2 = 0; } while(0);
            Chair_Position("BACK");
            _delay((unsigned long)((500)*(8000000/4000.0)));
            Chair_Position("STOP");
+            if(EUSART1_is_rx_ready()){
            Direction= EUSART1_Read();
            Direction='n';
+            if(EUSART1_is_rx_ready()){
            Direction= EUSART1_Read();
-           Direction='n';
+           Direction='n';}}
          }
 
          if(Get_Distance_Rear()<=18)
@@ -10366,18 +10369,22 @@ void main(void)
           Chair_Position("STOP");
            do { LATCbits.LATC2 = 1; } while(0);
            _delay((unsigned long)((6000)*(8000000/4000.0)));
+           do { LATCbits.LATC2 = 0; } while(0);
            Chair_Position("FORWARD");
            _delay((unsigned long)((500)*(8000000/4000.0)));
            Chair_Position("STOP");
+            if(EUSART1_is_rx_ready()){
            Direction= EUSART1_Read();
            Direction='n';
+            if(EUSART1_is_rx_ready()){
            Direction= EUSART1_Read();
-           Direction='n';
+           Direction='n';}}
+
          }
 
 
 
-          do { LATCbits.LATC2 = 0; } while(0);
+
 
     }
 }

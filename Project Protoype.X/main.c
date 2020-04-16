@@ -117,13 +117,16 @@ void main(void)
           Chair_Position("STOP");
            BUZZER_SetHigh();                    // Buzzer ON
            __delay_ms(6000);
+           BUZZER_SetLow(); 
            Chair_Position("BACK");
            __delay_ms(500);
            Chair_Position("STOP");
+            if(EUSART1_is_rx_ready()){
            Direction= EUSART1_Read();
            Direction='n';
+            if(EUSART1_is_rx_ready()){
            Direction= EUSART1_Read();
-           Direction='n';
+           Direction='n';}}
          }
         
          if(Get_Distance_Rear()<=18)
@@ -131,18 +134,22 @@ void main(void)
           Chair_Position("STOP");
            BUZZER_SetHigh();                    // Buzzer ON
            __delay_ms(6000);
+           BUZZER_SetLow(); 
            Chair_Position("FORWARD");
            __delay_ms(500);
            Chair_Position("STOP");
+            if(EUSART1_is_rx_ready()){
            Direction= EUSART1_Read();
            Direction='n';
+            if(EUSART1_is_rx_ready()){
            Direction= EUSART1_Read();
-           Direction='n';
+           Direction='n';}}
+           
          }
         
          //BUZZER_SetHigh();
           //__delay_ms(900);
-          BUZZER_SetLow();                      // Buzzer OF
+                               // Buzzer OF
          // __delay_ms(900);
     }
 }
