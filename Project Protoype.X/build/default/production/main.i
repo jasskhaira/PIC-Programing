@@ -10347,18 +10347,32 @@ void main(void)
 
 
 
-         while(Get_Distance_Front()<=12)
+         if(Get_Distance_Front()<=18)
          {
           Chair_Position("STOP");
            do { LATCbits.LATC2 = 1; } while(0);
-           _delay((unsigned long)((200)*(8000000/4000000.0)));
+           _delay((unsigned long)((6000)*(8000000/4000.0)));
+           Chair_Position("BACK");
+           _delay((unsigned long)((500)*(8000000/4000.0)));
+           Chair_Position("STOP");
+           Direction= EUSART1_Read();
+           Direction='n';
+           Direction= EUSART1_Read();
+           Direction='n';
          }
 
-         while(Get_Distance_Rear()<=12)
+         if(Get_Distance_Rear()<=18)
          {
           Chair_Position("STOP");
            do { LATCbits.LATC2 = 1; } while(0);
-           _delay((unsigned long)((200)*(8000000/4000000.0)));
+           _delay((unsigned long)((6000)*(8000000/4000.0)));
+           Chair_Position("FORWARD");
+           _delay((unsigned long)((500)*(8000000/4000.0)));
+           Chair_Position("STOP");
+           Direction= EUSART1_Read();
+           Direction='n';
+           Direction= EUSART1_Read();
+           Direction='n';
          }
 
 

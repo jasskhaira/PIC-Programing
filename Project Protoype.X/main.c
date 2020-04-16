@@ -112,18 +112,32 @@ void main(void)
             
          
          
-         while(Get_Distance_Front()<=12)
+         if(Get_Distance_Front()<=18)
          {
           Chair_Position("STOP");
            BUZZER_SetHigh();                    // Buzzer ON
-           __delay_us(200);
+           __delay_ms(6000);
+           Chair_Position("BACK");
+           __delay_ms(500);
+           Chair_Position("STOP");
+           Direction= EUSART1_Read();
+           Direction='n';
+           Direction= EUSART1_Read();
+           Direction='n';
          }
         
-         while(Get_Distance_Rear()<=12)
+         if(Get_Distance_Rear()<=18)
          {
           Chair_Position("STOP");
            BUZZER_SetHigh();                    // Buzzer ON
-           __delay_us(200);
+           __delay_ms(6000);
+           Chair_Position("FORWARD");
+           __delay_ms(500);
+           Chair_Position("STOP");
+           Direction= EUSART1_Read();
+           Direction='n';
+           Direction= EUSART1_Read();
+           Direction='n';
          }
         
          //BUZZER_SetHigh();
